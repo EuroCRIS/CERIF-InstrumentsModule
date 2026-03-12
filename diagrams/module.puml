@@ -1,0 +1,32 @@
+@startuml
+
+    !includesub ../../CERIF-Core/diagrams/core.puml!common
+    
+    !includesub ../../CERIF-Core/diagrams/core.puml!Publication_Channel
+    
+    ' you can even include complete core, not just its subsections - the command is below   
+    ' !include ../../CERIF-Core/diagrams/core.puml
+
+    !startsub XXX_section
+        class "XXX" #ddeedd {
+            fieldName1 : Date
+            fieldName2 : String
+        }
+        
+        enum "XXX_Type" #ddeedd {
+            Type1
+            Type2
+            Type3
+        }
+        
+        ' subclassing some CERIF Core class
+        "Publication_Channel" <|-- "XXX" 
+        
+        "XXX" ..> "XXX_Type" : "type"
+        
+        
+    !endsub
+
+    note right of XXX #ddeedd: Note for the class.
+
+@enduml

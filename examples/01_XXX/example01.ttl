@@ -1,0 +1,19 @@
+@prefix : <https://w3id.org/cerif2/xxxmodule/example01#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+@base <https://w3id.org/cerif2/xxxModule/example01#> .
+
+: rdfs:label "An example for XXX"@en .
+
+#################################################################
+### XXX
+#################################################################
+
+:object1 a <https://w3id.org/cerif2/xxxmodule/XXX> ;
+         <https://w3id.org/cerif2/xxxmodule/XXX#fieldName1> "2025-03-25"^^xsd:date ;
+         <https://w3id.org/cerif2/xxxmodule/XXX#fieldName2> "Name"@en ,
+                                                  "Ime"@sr-Latn-RS ,
+                                                  "Име"@sr-Cyrl-RS ;
+         <https://w3id.org/cerif2/xxxmodule/XXX#type>       "Type2" ^^ <https://w3id.org/cerif2/xxxmodule/XXX_Type> .

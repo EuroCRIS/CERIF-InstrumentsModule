@@ -1,0 +1,15 @@
+@startuml
+
+' some examples can be found in [CERIF-ScholarlyPublicationModule](https://github.com/EuroCRIS/CERIF-ScholarlyPublicationsModule/tree/main/examples)
+
+frame "XXXObject" #LightBlue {
+
+    object "<u>Object 1:XXX</u>" as object1 #ffffff {
+       fieldName1 = 2025-03-25 ^^ Date
+       fieldName2 =  "Name"@en , 
+                     "Ime"@sr-Latn-RS ,
+                     "Име"@sr-Cyrl-RS 
+       type = "Type2" ^^ XXX_Type
+    }
+}
+@enduml
