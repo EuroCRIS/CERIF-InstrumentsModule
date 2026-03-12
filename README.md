@@ -1,17 +1,21 @@
-# CERIF XXX Module
-Basic domain description of the module
+# CERIF Instruments Module
+This module contains classes and properties for modeling scientific instruments.
 
 ## Status
-(2026-03-05) Experimental.
+(2026-03-12) Work in progress.
 
 ## Overview
-
+Instruments – or more specifically [Instrument Instances](./entities/Instrument_Instance.md) – are [Infrastructure](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Infrastructure.md).
+Instrument instances can have information about their [models](./entities/Instrument_Model.md): several instrument instances can share a single model information record.
 
 ## Listings
 
 ### Entities
-The XXX Module consists of the following entities:
-* [XXX entity](./entities/XXX.md) 
+The Instruments Module consists of the following entities:
+* [Resource](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Resource.md) (imported from [the CERIF Core](https://github.com/EuroCRIS/CERIF-Core))
+  * [Infrastructure](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Infrastructure.md) (imported from [the CERIF Core](https://github.com/EuroCRIS/CERIF-Core))
+    * [Instrument Instance](./entities/Instrument_Instance.md) 
+    * [Instrument Model](./entities/Instrument_Model.md)
 
 ### Data Types
 * [XXX data type](./datatypes/XXX.md)
