@@ -1,12 +1,16 @@
 # CERIF Instruments Module
-This module contains classes and properties for modeling scientific instruments.
+This module contains classes and properties for modeling scientific instruments
+in line with the *PIDINST v.1.0* specification (DOI [10.15497/RDA00070](https://doi.org/10.15497/RDA00070)).
+The mapping is described in the *[Mapping PIDINST to Refactored CERIF](https://docs.google.com/spreadsheets/d/1w67LH7OcDkDRgjHOj2PCJk0LG3Uj4YZyn8SpLjAttVo/edit?gid=0#gid=0)* shared spreadsheet.
+The development of this module was done in the framework of the [INST-DSpace project](https://eurocris.org/projects/inst-dspace-project/) 
+led by [euroCRIS](https://eurocris.org/) with funding from the [Vietsch Foundation](https://www.vietsch-foundation.org/).
 
 ## Status
-(2026-03-12) Work in progress.
+(2026-09-28) Work in progress.
 
 ## Overview
 Instruments – or more specifically [Instrument Instances](./entities/Instrument_Instance.md) – are [Infrastructure](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Infrastructure.md).
-Instrument instances can have information about their [models](./entities/Instrument_Model.md): several instrument instances can share a single model information record.
+Instrument instances link information about their [models](./entities/Instrument_Model.md): several instrument instances can share a single model information record.
 
 ## Listings
 
