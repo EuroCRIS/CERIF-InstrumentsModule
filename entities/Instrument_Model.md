@@ -1,10 +1,11 @@
-# Instrument_Model
+# Instrument Model
 
 ## Definition
-The scope of the entity and its meaning.<sup>[1](#fn1)</sup>
+A model of a device or tool used for scientific purposes, including the study of both natural phenomena and theoretical research.<sup>[1](#fn1)</sup>
 
 ## Usage notes
-An additional description to communicate the purpose of the entity.
+This entity represents a class of devices of one type.\
+Even a unique [Instrument Instance](../entities/Instrument_Instance.md) should have its Instrument Model to represent its important properties.
 
 ## Specialization of
 [Infrastructure](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Infrastructure.md)
@@ -15,17 +16,9 @@ None besides those of [Infrastructure](https://github.com/EuroCRIS/CERIF-Core/bl
 ## Relationships
 Besides those of [Infrastructure](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Infrastructure.md):
 
-<a name="rel__has-instance">has-instance</a> / [is-instance-of](../entities/Instrument_Instance.md#user-content-rel__is-instance-of) : An Instrument_Model can have any number of [Instrument_Instances](../entities/Instrument_Instance.md).
-
-## Constraints
-Any constraints a subclass makes on its superclasses.
-
-## Illustrative Diagram
-A UML diagram showing this entity in its context if one is available.
+<a name="rel__has-instance">has-instance</a> / [is-instance-of](../entities/Instrument_Instance.md#user-content-rel__is-instance-of) : An Instrument Model can have any number of [Instrument Instances](../entities/Instrument_Instance.md).
 
 ---
-## Matches
-1. Close match of [whatever](url)
-
 ## References
-<a name="fn1">\[1\]</a> Source: ...
+<a name="fn1">\[1\]</a> Source: Adapted from the Wikipedia *[Scientific Instruments](https://en.wikipedia.org/wiki/Scientific_instrument)* article as of 2026-09-28, which attributes the formulation to:\
+Hessenbruch, Arne (2013). *Reader's Guide to the History of Science*. Taylor & Francis. pp. 675–77. ISBN 9781134263011.

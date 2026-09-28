@@ -73,8 +73,8 @@ Current state of the module: `Instrument_Instance` and `Instrument_Model` exist 
 
 ## 5. Fill in the boilerplate entity documentation
 
-- [ ] `entities/Instrument_Instance.md` — replace the "The scope of the entity..." placeholders with real Definition / Usage notes, Constraints, and the mappings from section 4
-- [ ] `entities/Instrument_Model.md` — same
+- [x] `entities/Instrument_Instance.md` — replace the "The scope of the entity..." placeholders with real Definition / Usage notes, Constraints, and the mappings from section 4
+- [x] `entities/Instrument_Model.md` — same
 
 ## 6. Module housekeeping (template leftovers)
 
