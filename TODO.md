@@ -43,37 +43,13 @@ Current state of the module: `Instrument_Instance` and `Instrument_Model` exist 
   - providing access to the instrument via a Service (general note 2 — not covered by this module)
 - [ ] Item 5.3/6.2 agent identifiers: the subtype of [Agent_Identifier](../CERIF-Core/entities/Agent_Identifier.md) encodes the `identifierType` (general note 3) — state this in the usage notes
 
-## 4. Document the mappings that reuse existing Core mechanisms
+## 4. Document the mappings
 
-### In Instrument_Instance usage notes
-- [ ] item 1 Identifier → `Resource.has-identifier` (Resource_Identifier attached to the Resource ancestor)
-- [ ] item 3 LandingPage → `Infrastructure.url`
-- [ ] item 4 Name → `Infrastructure.title`
-- [ ] item 5 Owner → `Infrastructure.has-contribution` with Infrastructure_Ownership / Infrastructure_Operation; owner is the `has-actor` Agent
-- [ ] item 5.1 ownerName → name of the linked Agent (Group_or_Organisation_Unit.name, Person.name, or `display person name` of an [Affiliation_Statement](../CERIF-Core/entities/Affiliation_Statement.md) linked to the contribution)
-- [ ] item 5.2 ownerContact → `contacts` of that Affiliation_Statement, using [Email_Address](../CERIF-Core/datatypes/Email_Address.md)
-- [ ] item 5.3 ownerIdentifier → concrete subtype of Agent_Identifier assigned to the owner Agent
-- [ ] item 11 Date → `date range` of the Operating (Infrastructure_Operation) contribution: startDate = Commissioned, endDate = DeCommissioned
-- [ ] item 12 RelatedIdentifier:
-  - `IsDescribedBy` → `Resource.has-description`
-  - `IsNewVersionOf` → `Resource.is-new-version-of`
-  - `IsPreviousVersionOf` → `Resource.is-previous-version-of`
-  - `HasComponent` → `Resource.has-part`
-  - `IsComponentOf` → `Resource.is-part-of`
-  - `WasUsedIn` → [Resource_Usage_Statement](../CERIF-Core/entities/Resource_Usage_Statement.md) → `details` (Contribution_Statement) → `references` (Contribution, which is an Activity, i.e. the research activity the instrument was deployed in)
-  - `IsIdenticalTo` → multiple Resource_Identifiers on the same Infrastructure
-- [ ] item 13 AlternateIdentifier → Instrument_Instance_Identifier subtypes (see section 1)
-
-### In Instrument_Model usage notes
-- [ ] item 6 Manufacturer → Manufacturing contribution; `has-actor` is the manufacturer
-- [ ] item 6.1 manufacturerName → Group_or_Organisation_Unit.name / Person.name / Affiliation_Statement `display person name`
-- [ ] item 6.2 manufacturerIdentifier → concrete subclass of Agent_Identifier
-- [ ] item 7.1 modelName → `Infrastructure.title`
-- [ ] item 7.2 modelIdentifier → Instrument_Model_Identifier
+- [x] Complete PIDINST → CERIF mapping documented in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md)
 
 ## 5. Fill in the boilerplate entity documentation
 
-- [x] `entities/Instrument_Instance.md` — replace the "The scope of the entity..." placeholders with real Definition / Usage notes, Constraints, and the mappings from section 4
+- [x] `entities/Instrument_Instance.md` — replace the "The scope of the entity..." placeholders with real Definition / Usage notes, Constraints
 - [x] `entities/Instrument_Model.md` — same
 
 ## 6. Module housekeeping (template leftovers)
