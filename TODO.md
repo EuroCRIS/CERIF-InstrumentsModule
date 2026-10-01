@@ -13,10 +13,10 @@ Current state of the module: the mapping is fully documented in [mappings/PIDINS
 - [x] **Manufacturing** — `actor` is the manufacturer (item 6)
 
 ### Identifier classes (subclasses of [Resource_Identifier](../CERIF-Core/entities/Resource_Identifier.md))
-- [ ] **Instrument_Instance_Identifier** — base for alternate identifiers of an instance (item 13); note: record the context in which the identifier is meaningful, where available
-- [ ] **Serial_Number** — `alternateIdentifierType=SerialNumber` (item 13.1)
-- [ ] **Inventory_Number** — `alternateIdentifierType=InventoryNumber` (item 13.2)
-- [ ] **Other_Instrument_Identifier** — `alternateIdentifierType=Other` (item 13.3)
+- [x] **Instrument_Instance_Identifier** — base for alternate identifiers of an instance (item 13); note: record the context in which the identifier is meaningful, where available
+- [x] **Serial_Number** — `alternateIdentifierType=SerialNumber` (item 13.1)
+- [x] **Inventory_Number** — `alternateIdentifierType=InventoryNumber` (item 13.2)
+- [x] **Other_Instrument_Instance_Identifier** — `alternateIdentifierType=Other` (item 13.3)
 - [ ] **Instrument_Model_Identifier** — `modelIdentifier` (item 7.2)
 - [ ] Decide: PIDINST item 1 (the PID itself) — the general notes say CERIF maps it to a *specific subclass* of Resource_Identifier; decide whether to define that subclass here or keep it generic
 

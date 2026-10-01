@@ -10,6 +10,7 @@
     !includesub ../../CERIF-Core/diagrams/core.puml!Date_Range
     !includesub ../../CERIF-Core/diagrams/core.puml!Contribution_Statement
     !includesub ../../CERIF-Core/diagrams/core.puml!Resource_Usage_Statement
+    !includesub ../../CERIF-Core/diagrams/core.puml!Resource_Identifier
 
     !startsub Instrument_Instance
         class "Instrument_Instance" #d8f0d8 {
@@ -48,6 +49,36 @@
         }
 
         "Contribution_to_Infrastructure" <|-- "Manufacturing"
+    !endsub
+
+    !startsub Instrument_Instance_Identifier
+        class "Instrument_Instance_Identifier" #d8f0d8 {
+        }
+
+        "Resource_Identifier" <|-- "Instrument_Instance_Identifier"
+    !endsub
+
+    !startsub Serial_Number
+        class "Serial_Number" #d8f0d8 {
+            serialNumber : String
+        }
+
+        "Instrument_Instance_Identifier" <|-- "Serial_Number"
+    !endsub
+
+    !startsub Inventory_Number
+        class "Inventory_Number" #d8f0d8 {
+            inventoryNumber : String
+        }
+
+        "Instrument_Instance_Identifier" <|-- "Inventory_Number"
+    !endsub
+
+    !startsub Other_Instrument_Instance_Identifier
+        class "Other_Instrument_Instance_Identifier" #d8f0d8 {
+        }
+
+        "Instrument_Instance_Identifier" <|-- "Other_Instrument_Instance_Identifier"
     !endsub
 
 @enduml

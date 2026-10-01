@@ -43,7 +43,7 @@ The PIDINST record, except the model information (items 6–10), is mapped to In
 | 13 | AlternateIdentifier | R | | Identifiers other than PIDINST pertaining to the same instrument instance. This should be used if the instrument has a serial number. Other possible uses include an owner's inventory number or an entry in some instrument data base. Free text, should be unique identifiers. | Concrete subtypes of **Instrument_Instance_Identifier** (itself a subtype of Resource_Identifier), attached via has-identifier. Note: the identifiers are not likely to be globally unique, so care should be exercised — it would be nice to also record the context in which they are meaningful, where this information is available. |
 | 13.1 | alternateIdentifierType=SerialNumber | | 0–n | | **Serial_Number** as a subtype of Resource_Identifier |
 | 13.2 | alternateIdentifierType=InventoryNumber | | 0–n | | **Inventory_Number** as a subtype of Resource_Identifier |
-| 13.3 | alternateIdentifierType=Other | | 0–n | | **Other_Instrument_Identifier** as a subtype of Resource_Identifier |
+| 13.3 | alternateIdentifierType=Other | | 0–n | | **Other_Instrument_Instance_Identifier** as a subtype of Resource_Identifier |
 
 ## Model information from PIDINST record → [Instrument Model](../entities/Instrument_Model.md)
 
