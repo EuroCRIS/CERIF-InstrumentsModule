@@ -81,4 +81,12 @@
         "Instrument_Instance_Identifier" <|-- "Other_Instrument_Instance_Identifier"
     !endsub
 
+    !startsub Instrument_Model_Identifier
+        class "Instrument_Model_Identifier" #d8f0d8 {
+            modelDesignation : String
+        }
+
+        "Resource_Identifier" <|-- "Instrument_Model_Identifier"
+    !endsub
+
 @enduml

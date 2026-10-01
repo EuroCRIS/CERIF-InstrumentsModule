@@ -17,7 +17,7 @@ Current state of the module: the mapping is fully documented in [mappings/PIDINS
 - [x] **Serial_Number** — `alternateIdentifierType=SerialNumber` (item 13.1)
 - [x] **Inventory_Number** — `alternateIdentifierType=InventoryNumber` (item 13.2)
 - [x] **Other_Instrument_Instance_Identifier** — `alternateIdentifierType=Other` (item 13.3)
-- [ ] **Instrument_Model_Identifier** — `modelIdentifier` (item 7.2)
+- [x] **Instrument_Model_Identifier** — `modelIdentifier` (item 7.2)
 - [ ] Decide: PIDINST item 1 (the PID itself) — the general notes say CERIF maps it to a *specific subclass* of Resource_Identifier; decide whether to define that subclass here or keep it generic
 
 ### Other
