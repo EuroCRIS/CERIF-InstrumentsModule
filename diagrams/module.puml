@@ -3,6 +3,13 @@
     !includesub ../../CERIF-Core/diagrams/core.puml!common
     !includesub ../../CERIF-Core/diagrams/core.puml!Resource
     !includesub ../../CERIF-Core/diagrams/core.puml!Infrastructure
+    !includesub ../../CERIF-Core/diagrams/core.puml!Contribution_to_Infrastructure
+    !includesub ../../CERIF-Core/diagrams/core.puml!Contribution
+    !includesub ../../CERIF-Core/diagrams/core.puml!Activity
+    !includesub ../../CERIF-Core/diagrams/core.puml!Agent
+    !includesub ../../CERIF-Core/diagrams/core.puml!Date_Range
+    !includesub ../../CERIF-Core/diagrams/core.puml!Contribution_Statement
+    !includesub ../../CERIF-Core/diagrams/core.puml!Resource_Usage_Statement
 
     !startsub Instrument_Instance
         class "Instrument_Instance" #d8f0d8 {
@@ -20,6 +27,27 @@
 
     !startsub Instrument_Instance
         "Instrument_Instance" "0..*" -- "0..1" "Instrument_Model" : is instance of >
+    !endsub
+
+    !startsub Infrastructure_Ownership
+        class "Infrastructure_Ownership" #d8f0d8 {
+        }
+
+        "Contribution_to_Infrastructure" <|-- "Infrastructure_Ownership"
+    !endsub
+
+    !startsub Infrastructure_Operation
+        class "Infrastructure_Operation" #d8f0d8 {
+        }
+
+        "Contribution_to_Infrastructure" <|-- "Infrastructure_Operation"
+    !endsub
+
+    !startsub Manufacturing
+        class "Manufacturing" #d8f0d8 {
+        }
+
+        "Contribution_to_Infrastructure" <|-- "Manufacturing"
     !endsub
 
 @enduml
