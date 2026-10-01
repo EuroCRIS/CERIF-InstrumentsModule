@@ -3,14 +3,14 @@
 Source: [Mapping PIDINST to Refactored CERIF](https://docs.google.com/spreadsheets/d/1w67LH7OcDkDRgjHOj2PCJk0LG3Uj4YZyn8SpLjAttVo/edit?gid=0#gid=0)
 Numbers below refer to the PIDINST item IDs in that spreadsheet.
 
-Current state of the module: `Instrument_Instance` and `Instrument_Model` exist only as boilerplate skeletons (one relationship each: `is-instance-of` / `has-instance`). Everything else from the mapping is missing.
+Current state of the module: the mapping is fully documented in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md); defined so far: `Instrument_Instance`, `Instrument_Model`, the three contribution types below, and `Metadata_Set` in the [Core](../CERIF-Core/entities/Metadata_Set.md). Remaining: the identifier classes, the new attributes, and housekeeping.
 
 ## 1. New entities to define
 
 ### Contribution types (subclasses of [Contribution_to_Infrastructure](../CERIF-Core/entities/Contribution_to_Infrastructure.md))
-- [ ] **Infrastructure_Ownership** — for the legal owner (item 5)
-- [ ] **Infrastructure_Operation** — for the operator (item 5); its `date range` carries the commissioned/decommissioned dates (item 11)
-- [ ] **Manufacturing** — `actor` is the manufacturer (item 6)
+- [x] **Infrastructure_Ownership** — for the legal owner (item 5)
+- [x] **Infrastructure_Operation** — for the operator (item 5); its `date range` carries the commissioned/decommissioned dates (item 11)
+- [x] **Manufacturing** — `actor` is the manufacturer (item 6)
 
 ### Identifier classes (subclasses of [Resource_Identifier](../CERIF-Core/entities/Resource_Identifier.md))
 - [ ] **Instrument_Instance_Identifier** — base for alternate identifiers of an instance (item 13); note: record the context in which the identifier is meaningful, where available
@@ -21,7 +21,7 @@ Current state of the module: `Instrument_Instance` and `Instrument_Model` exist 
 - [ ] Decide: PIDINST item 1 (the PID itself) — the general notes say CERIF maps it to a *specific subclass* of Resource_Identifier; decide whether to define that subclass here or keep it generic
 
 ### Other
-- [ ] **Metadata_Set** (subclass of [Document](../CERIF-Core/entities/Document.md)) — target of `HasMetadata` related identifiers (item 12)
+- [x] **Metadata_Set** (subclass of [Document](../CERIF-Core/entities/Document.md)) — target of `HasMetadata` related identifiers (item 12) — defined in the [Core](../CERIF-Core/entities/Metadata_Set.md), which also retargets `has-metadata` to it
 - [ ] **Instrument_Model_Type** (controlled-vocabulary class) — values for `Instrument_Model.type` (item 9)
 - [ ] Open question (end of spreadsheet): **Group_of_Instruments** — possible intermediate entity for groups of instruments
 
@@ -33,15 +33,15 @@ Current state of the module: `Instrument_Instance` and `Instrument_Model` exist 
 
 ## 3. Decisions / naming to resolve (document in entity files)
 
-- [ ] Instance→model relationship: the spreadsheet maps items 6–10 to `Infrastructure_Instance.model`; the module currently names it `is-instance-of` / `has-instance`. Decide and document (rename, or note the discrepancy)
-- [ ] `HasMetadata` (item 12): the spreadsheet says use `Resource.is-described-by` pointing at a Metadata_Set, while Core also has `has-metadata` / `is-metadata-of`. Follow the spreadsheet and document the choice
-- [ ] Document explicitly unsupported / unmapped items:
+- [x] Instance→model relationship: the spreadsheet maps items 6–10 to `Infrastructure_Instance.model`; the module currently names it `is-instance-of` / `has-instance`. Decide and document (rename, or note the discrepancy) — discrepancy noted in the mapping
+- [x] `HasMetadata` (item 12): the spreadsheet says use `Resource.is-described-by` pointing at a Metadata_Set, while Core also has `has-metadata` / `is-metadata-of`. Follow the spreadsheet and document the choice — choice documented in the mapping
+- [x] Document explicitly unsupported / unmapped items:
   - item 2 SchemaVersion (fixed "1.0", no mapping)
   - item 7.2.1 modelIdentifierType (not mapped at this stage)
   - item 12 `References` (too generic, not supported)
   - item 12 `IsAttachedTo` (not supported at this stage)
   - providing access to the instrument via a Service (general note 2 — not covered by this module)
-- [ ] Item 5.3/6.2 agent identifiers: the subtype of [Agent_Identifier](../CERIF-Core/entities/Agent_Identifier.md) encodes the `identifierType` (general note 3) — state this in the usage notes
+- [x] Item 5.3/6.2 agent identifiers: the subtype of [Agent_Identifier](../CERIF-Core/entities/Agent_Identifier.md) encodes the `identifierType` (general note 3) — stated in the mapping (general note 3)
 
 ## 4. Document the mappings
 
@@ -55,7 +55,7 @@ Current state of the module: `Instrument_Instance` and `Instrument_Model` exist 
 ## 6. Module housekeeping (template leftovers)
 
 - [ ] Remove placeholder files: `entities/XXX.md`, `datatypes/XXX.md`, `datatypes/YYY.md`
-- [ ] Rewrite `diagrams/module.puml` (still shows the XXX template inheriting from Publication_Channel) with the real class hierarchy; regenerate `module.svg`
+- [x] Rewrite `diagrams/module.puml` (still shows the XXX template inheriting from Publication_Channel) with the real class hierarchy; regenerate `module.svg`
 - [ ] Replace placeholder example `examples/01_XXX/` with a real example: a PIDINST record (instance + model info) serialized in CERIF (`.ttl` + `.puml` + `.svg`); update `examples/README.md`
 - [ ] Update `README.md` listings (still references XXX/YYY data types)
 - [ ] Generate `serializations/RDF/` (the Scholarly Publication Module ships generated OWL/RDF; this module has none)
