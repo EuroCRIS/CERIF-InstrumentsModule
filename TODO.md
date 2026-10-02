@@ -3,7 +3,7 @@
 Source: [Mapping PIDINST to Refactored CERIF](https://docs.google.com/spreadsheets/d/1w67LH7OcDkDRgjHOj2PCJk0LG3Uj4YZyn8SpLjAttVo/edit?gid=0#gid=0)
 Numbers below refer to the PIDINST item IDs in that spreadsheet.
 
-Current state of the module: the mapping is fully documented in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md); defined so far: `Instrument_Instance`, `Instrument_Model`, the three contribution types below, and `Metadata_Set` in the [Core](../CERIF-Core/entities/Metadata_Set.md). Remaining: the identifier classes, the new attributes, and housekeeping.
+Current state of the module: the mapping is fully documented in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md); defined so far: `Instrument_Instance`, `Instrument_Model`, the identifier classes and the three contribution types below, and `Metadata_Set` in the [Core](../CERIF-Core/entities/Metadata_Set.md). Remaining: `Instrument_Model_Type` and the open question `Group_of_Instruments`, the new attributes, and housekeeping.
 
 ## 1. New entities to define
 
@@ -18,7 +18,7 @@ Current state of the module: the mapping is fully documented in [mappings/PIDINS
 - [x] **Inventory_Number** — `alternateIdentifierType=InventoryNumber` (item 13.2)
 - [x] **Other_Instrument_Instance_Identifier** — `alternateIdentifierType=Other` (item 13.3)
 - [x] **Instrument_Model_Identifier** — `modelIdentifier` (item 7.2)
-- [ ] Decide: PIDINST item 1 (the PID itself) — the general notes say CERIF maps it to a *specific subclass* of Resource_Identifier; decide whether to define that subclass here or keep it generic
+- [x] Decide: PIDINST item 1 (the PID itself) — the general notes say CERIF maps it to a *specific subclass* of Resource_Identifier; decide whether to define that subclass here or keep it generic — resolved: the PID is a DOI, so the mapping uses the Core DOI_Identifier; other identifiers are not prohibited from appearing alongside
 
 ### Other
 - [x] **Metadata_Set** (subclass of [Document](../CERIF-Core/entities/Document.md)) — target of `HasMetadata` related identifiers (item 12) — defined in the [Core](../CERIF-Core/entities/Metadata_Set.md), which also retargets `has-metadata` to it

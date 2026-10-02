@@ -18,7 +18,7 @@ The PIDINST record, except the model information (items 6–10), is mapped to In
 
 | ID | Property | Obl | Occ | PIDINST definition (and constraints) | Refactored CERIF |
 |----|----------|-----|-----|--------------------------------------|------------------|
-| 1 | Identifier | M | 1 | Unique string that identifies the instrument instance | A [Resource Identifier](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Resource_Identifier.md) attached to the Resource (ancestor of Instrument Instance) via [has-identifier](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Resource.md#user-content-rel__has-identifier) |
+| 1 | Identifier | M | 1 | Unique string that identifies the instrument instance | A [DOI Identifier](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/DOI_Identifier.md) attached to the Resource (ancestor of Instrument Instance) via [has-identifier](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Resource.md#user-content-rel__has-identifier); other identifiers (item 13) may appear alongside |
 | 2 | SchemaVersion | M | 1 | Version number of the PIDINST schema used in this record. Fixed value "1.0" | — (not mapped; the value is fixed) |
 | 3 | LandingPage | M | 1 | A landing page that the identifier resolves to. URL | [Infrastructure.url](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Infrastructure.md) |
 | 4 | Name | M | 1 | Name by which the instrument instance is known. Free text | [Infrastructure.title](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Infrastructure.md) |
