@@ -1,23 +1,23 @@
 @startuml
 
-    object "<u>Ocean Surveyor #001: Vessel-Mount Long Range 3-D Current Profiling (test) : Instrument_Instance</u>" as instance #ddeedd {
+    object "<u>Ocean Surveyor #001: Vessel-Mount Long Range 3-D Current Profiling (test) : Instrument_Instance</u>" as instance #E4E6D2 {
         title = "Ocean Surveyor #001: Vessel-Mount Long Range 3-D Current Profiling (test)"@en
         acronym = "TRDI Ocean Surveyor"@en
         url = "https://dspacecris.eurocris.org/handle/11366/10919"
         localId = "INST-DSpace_001" ^^ Local_Resource_ID
     }
 
-    object "<u>TRDI Ocean Surveyor : Instrument_Model</u>" as model #ddeedd {
+    object "<u>TRDI Ocean Surveyor : Instrument_Model</u>" as model #E4E6D2 {
         title = "TRDI Ocean Surveyor"@en
     }
 
-    object "<u>Acoustic Doppler Current Profiling Measurement Device : Instrument_Model_Type</u>" as modelType #ddeedd {
+    object "<u>Acoustic Doppler Current Profiling Measurement Device : Instrument_Model_Type</u>" as modelType #E4E6D2 {
         label = "Acoustic Doppler Current Profiling Measurement Device"@en
     }
 
-    object "<u>Ownership 1 : Infrastructure_Ownership</u>" as ownership #ddeedd
+    object "<u>Ownership 1 : Infrastructure_Ownership</u>" as ownership #E4E6D2
 
-    object "<u>Manufacturing 1 : Manufacturing</u>" as manufacturing #ddeedd
+    object "<u>Manufacturing 1 : Manufacturing</u>" as manufacturing #E4E6D2
 
     object "<u>euroCRIS : Organisation_Unit</u>" as eurocris #ffffff {
         name = "euroCRIS"@en

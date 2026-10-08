@@ -13,14 +13,14 @@
     !includesub ../../CERIF-Core/diagrams/core.puml!Resource_Identifier
 
     !startsub Instrument_Instance
-        class "Instrument_Instance" #d8f0d8 {
+        class "Instrument_Instance" #E4E6D2 {
         }
 
         "Infrastructure" <|-- "Instrument_Instance"
     !endsub
 
     !startsub Instrument_Model
-        class "Instrument_Model" #d8f0d8 {
+        class "Instrument_Model" #E4E6D2 {
         }
 
         "Infrastructure" <|-- "Instrument_Model"
@@ -31,35 +31,35 @@
     !endsub
 
     !startsub Infrastructure_Ownership
-        class "Infrastructure_Ownership" #d8f0d8 {
+        class "Infrastructure_Ownership" #E4E6D2 {
         }
 
         "Contribution_to_Infrastructure" <|-- "Infrastructure_Ownership"
     !endsub
 
     !startsub Infrastructure_Operation
-        class "Infrastructure_Operation" #d8f0d8 {
+        class "Infrastructure_Operation" #E4E6D2 {
         }
 
         "Contribution_to_Infrastructure" <|-- "Infrastructure_Operation"
     !endsub
 
     !startsub Manufacturing
-        class "Manufacturing" #d8f0d8 {
+        class "Manufacturing" #E4E6D2 {
         }
 
         "Contribution_to_Infrastructure" <|-- "Manufacturing"
     !endsub
 
     !startsub Instrument_Instance_Identifier
-        class "Instrument_Instance_Identifier" #d8f0d8 {
+        class "Instrument_Instance_Identifier" #E4E6D2 {
         }
 
         "Resource_Identifier" <|-- "Instrument_Instance_Identifier"
     !endsub
 
     !startsub Serial_Number
-        class "Serial_Number" #d8f0d8 {
+        class "Serial_Number" #E4E6D2 {
             serialNumber : String
         }
 
@@ -67,7 +67,7 @@
     !endsub
 
     !startsub Inventory_Number
-        class "Inventory_Number" #d8f0d8 {
+        class "Inventory_Number" #E4E6D2 {
             inventoryNumber : String
         }
 
@@ -75,14 +75,14 @@
     !endsub
 
     !startsub Other_Instrument_Instance_Identifier
-        class "Other_Instrument_Instance_Identifier" #d8f0d8 {
+        class "Other_Instrument_Instance_Identifier" #E4E6D2 {
         }
 
         "Instrument_Instance_Identifier" <|-- "Other_Instrument_Instance_Identifier"
     !endsub
 
     !startsub Instrument_Model_Identifier
-        class "Instrument_Model_Identifier" #d8f0d8 {
+        class "Instrument_Model_Identifier" #E4E6D2 {
             modelDesignation : String
         }
 
@@ -90,7 +90,7 @@
     !endsub
 
     !startsub Instrument_Model_Type
-        class "Instrument_Model_Type" #d8f0d8 {
+        class "Instrument_Model_Type" #E4E6D2 {
         }
 
         "Instrument_Model" "0..*" -- "0..*" "Instrument_Model_Type" : has type >
