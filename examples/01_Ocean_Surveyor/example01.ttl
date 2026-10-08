@@ -63,5 +63,6 @@
 
 :ocean_surveyor_datasheet a <https://w3id.org/cerif2/Document> , <https://w3id.org/cerif2/Downloadable> ;
   <https://w3id.org/cerif2/Document#title> "TRDI_ADCP_ocean_surveyor_datasheet.pdf"@en ;
+  <https://w3id.org/cerif2/Downloadable#downloadUrl> "https://dspacecris.eurocris.org/entities/equipment/b306bf08-a96c-4933-9ee9-1e84319aaf3b" ;
   <https://w3id.org/cerif2/Downloadable#mimeType> "application/pdf" ;
   <https://w3id.org/cerif2/Downloadable#size> "326400"^^<https://w3id.org/cerif2/Decimal> .

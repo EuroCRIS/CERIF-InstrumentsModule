@@ -33,6 +33,7 @@
 
     object "<u>TRDI_ADCP_ocean_surveyor_datasheet.pdf : Document</u>" as datasheet #ffffff {
         title = "TRDI_ADCP_ocean_surveyor_datasheet.pdf"@en
+        downloadUrl = "https://dspacecris.eurocris.org/entities/equipment/b306bf08-a96c-4933-9ee9-1e84319aaf3b"
         mimeType = "application/pdf"
     }
 
