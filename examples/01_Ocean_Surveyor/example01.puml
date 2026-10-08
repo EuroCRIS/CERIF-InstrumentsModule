@@ -1,0 +1,55 @@
+@startuml
+
+    object "<u>Ocean Surveyor #001: Vessel-Mount Long Range 3-D Current Profiling (test) : Instrument_Instance</u>" as instance #ddeedd {
+        title = "Ocean Surveyor #001: Vessel-Mount Long Range 3-D Current Profiling (test)"@en
+        acronym = "TRDI Ocean Surveyor"@en
+        url = "https://dspacecris.eurocris.org/handle/11366/10919"
+        localId = "INST-DSpace_001" ^^ Local_Resource_ID
+    }
+
+    object "<u>TRDI Ocean Surveyor : Instrument_Model</u>" as model #ddeedd {
+        title = "TRDI Ocean Surveyor"@en
+    }
+
+    object "<u>Acoustic Doppler Current Profiling Measurement Device : Instrument_Model_Type</u>" as modelType #ddeedd {
+        label = "Acoustic Doppler Current Profiling Measurement Device"@en
+    }
+
+    object "<u>Ownership 1 : Infrastructure_Ownership</u>" as ownership #ddeedd
+
+    object "<u>Manufacturing 1 : Manufacturing</u>" as manufacturing #ddeedd
+
+    object "<u>euroCRIS : Organisation_Unit</u>" as eurocris #ffffff {
+        name = "euroCRIS"@en
+    }
+
+    object "<u>04340dw19 : ROR_Identifier</u>" as eurocris_ror #ffffff {
+        rorId = "04340dw19" ^^ ROR_ID
+    }
+
+    object "<u>Teledyne RD Instruments : Organisation_Unit</u>" as teledyne #ffffff {
+        name = "Teledyne RD Instruments"@en
+    }
+
+    object "<u>TRDI_ADCP_ocean_surveyor_datasheet.pdf : Document</u>" as datasheet #ffffff {
+        title = "TRDI_ADCP_ocean_surveyor_datasheet.pdf"@en
+        mimeType = "application/pdf"
+    }
+
+    instance *--> "is-instance-of" model
+
+    model *--> "has-type" modelType
+
+    instance *--> "has-contribution" ownership
+
+    ownership o--> "has-actor" eurocris
+
+    eurocris o--> "has-identifier" eurocris_ror
+
+    model *--> "has-contribution" manufacturing
+
+    manufacturing o--> "has-actor" teledyne
+
+    instance o--> "has-description" datasheet
+
+@enduml

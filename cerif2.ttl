@@ -3,7 +3,7 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix spdx: <http://spdx.org/rdf/terms#> .
 
-<https://w3id.org/cerif2/instruments-module/> a doap:Project;
+<https://w3id.org/cerif2/instruments/> a doap:Project;
                                doap:name "CERIF Instruments Module";
                                doap:repository [
                                      a doap:GitRepository;

@@ -1,0 +1,67 @@
+@prefix : <https://w3id.org/cerif2/instruments/example01#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+@base <https://w3id.org/cerif2/instruments/example01#> .
+
+: rdfs:label "An example for an instrument instance (Ocean Surveyor)"@en .
+
+#################################################################
+### Instrument instance and model
+#################################################################
+
+:ocean_surveyor a <https://w3id.org/cerif2/instruments/Instrument_Instance> ;
+  <https://w3id.org/cerif2/Infrastructure#title> "Ocean Surveyor #001: Vessel-Mount Long Range 3-D Current Profiling (test)"@en ;
+  <https://w3id.org/cerif2/Infrastructure#acronym> "TRDI Ocean Surveyor"@en ;
+  <https://w3id.org/cerif2/Infrastructure#url> "https://dspacecris.eurocris.org/handle/11366/10919"^^<https://w3id.org/cerif2/Website_Address> ;
+  <https://w3id.org/cerif2/Resource#hasIdentifier> [
+    a <https://w3id.org/cerif2/Local_Resource_Identifier> ;
+    <https://w3id.org/cerif2/Local_Resource_Identifier#localId> "INST-DSpace_001"^^<https://w3id.org/cerif2/Local_Resource_ID>
+  ] ;
+  <https://w3id.org/cerif2/instruments/Instrument_Instance#isInstanceOf> :ocean_surveyor_model ;
+  <https://w3id.org/cerif2/Resource#hasDescription> :ocean_surveyor_datasheet ;
+  <https://w3id.org/cerif2/Infrastructure#hasContribution> :ownership_ocean_surveyor .
+
+:ocean_surveyor_model a <https://w3id.org/cerif2/instruments/Instrument_Model> ;
+  <https://w3id.org/cerif2/Infrastructure#title> "TRDI Ocean Surveyor"@en ;
+  <https://w3id.org/cerif2/instruments/Instrument_Model#hasType> :adcp_measurement_device ;
+  <https://w3id.org/cerif2/Infrastructure#hasContribution> :manufacturing_ocean_surveyor_model .
+
+:adcp_measurement_device a <https://w3id.org/cerif2/instruments/Instrument_Model_Type> ;
+  <https://w3id.org/cerif2/instruments/Instrument_Model_Type#label> "Acoustic Doppler Current Profiling Measurement Device"@en .
+
+#################################################################
+### Agents
+#################################################################
+
+:eurocris a <https://w3id.org/cerif2/Organisation_Unit> ;
+  <https://w3id.org/cerif2/Group_or_Organisation_Unit#name> "euroCRIS"@en ;
+  <https://w3id.org/cerif2/Agent#hasIdentifier> [
+    a <https://w3id.org/cerif2/ROR_Identifier> ;
+    <https://w3id.org/cerif2/ROR_Identifier#rorId> "04340dw19"^^<https://w3id.org/cerif2/ROR_ID>
+  ] .
+
+:teledyne_rdi a <https://w3id.org/cerif2/Organisation_Unit> ;
+  <https://w3id.org/cerif2/Group_or_Organisation_Unit#name> "Teledyne RD Instruments"@en .
+
+#################################################################
+### Contributions to Infrastructure
+#################################################################
+
+:ownership_ocean_surveyor a <https://w3id.org/cerif2/instruments/Infrastructure_Ownership> ;
+  <https://w3id.org/cerif2/Contribution_to_Infrastructure#hasTarget> :ocean_surveyor ;
+  <https://w3id.org/cerif2/Activity#hasActor> :eurocris .
+
+:manufacturing_ocean_surveyor_model a <https://w3id.org/cerif2/instruments/Manufacturing> ;
+  <https://w3id.org/cerif2/Contribution_to_Infrastructure#hasTarget> :ocean_surveyor_model ;
+  <https://w3id.org/cerif2/Activity#hasActor> :teledyne_rdi .
+
+#################################################################
+### Description document
+#################################################################
+
+:ocean_surveyor_datasheet a <https://w3id.org/cerif2/Document> , <https://w3id.org/cerif2/Downloadable> ;
+  <https://w3id.org/cerif2/Document#title> "TRDI_ADCP_ocean_surveyor_datasheet.pdf"@en ;
+  <https://w3id.org/cerif2/Downloadable#mimeType> "application/pdf" ;
+  <https://w3id.org/cerif2/Downloadable#size> "326400"^^<https://w3id.org/cerif2/Decimal> .
