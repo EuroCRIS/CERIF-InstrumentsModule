@@ -57,7 +57,7 @@ Current state of the module: the mapping is fully documented in [mappings/PIDINS
 
 - [ ] Remove placeholder files: `entities/XXX.md`, `datatypes/XXX.md`, `datatypes/YYY.md`
 - [x] Rewrite `diagrams/module.puml` (still shows the XXX template inheriting from Publication_Channel) with the real class hierarchy; regenerate `module.svg`
-- [ ] Replace placeholder example `examples/01_XXX/` with a real example: a PIDINST record (instance + model info) serialized in CERIF (`.ttl` + `.puml` + `.svg`); update `examples/README.md`
+- [x] Replace placeholder example `examples/01_XXX/` with a real example: a PIDINST record (instance + model info) serialized in CERIF (`.ttl` + `.puml` + `.svg`); update `examples/README.md`
 - [ ] Update `README.md` listings (still references XXX/YYY data types)
 - [ ] Generate `serializations/RDF/` (the Scholarly Publication Module ships generated OWL/RDF; this module has none)
 - [ ] Add a `.gitignore` (`.idea/` is currently untracked)
