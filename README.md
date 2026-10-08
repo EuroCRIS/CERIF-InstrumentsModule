@@ -18,24 +18,27 @@ Instrument instances link information about their [models](./entities/Instrument
 The Instruments Module consists of the following entities:
 * [Resource](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Resource.md) (imported from [the CERIF Core](https://github.com/EuroCRIS/CERIF-Core))
   * [Infrastructure](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Infrastructure.md) (imported from [the CERIF Core](https://github.com/EuroCRIS/CERIF-Core))
-    * [Instrument Instance](./entities/Instrument_Instance.md) 
+    * [Instrument Instance](./entities/Instrument_Instance.md)
     * [Instrument Model](./entities/Instrument_Model.md)
-
-### Data Types
-* [XXX data type](./datatypes/XXX.md)
-* [YYY data type](./datatypes/YYY.md)
-
+  * [Resource Identifier](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Resource_Identifier.md) (imported from [the CERIF Core](https://github.com/EuroCRIS/CERIF-Core))
+    * [Instrument Instance Identifier](./entities/Instrument_Instance_Identifier.md)
+      * [Serial Number](./entities/Serial_Number.md)
+      * [Inventory Number](./entities/Inventory_Number.md)
+      * [Other Instrument Instance Identifier](./entities/Other_Instrument_Instance_Identifier.md)
+    * [Instrument Model Identifier](./entities/Instrument_Model_Identifier.md)
+* [Contribution to Infrastructure](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Contribution_to_Infrastructure.md) (imported from [the CERIF Core](https://github.com/EuroCRIS/CERIF-Core))
+  * [Infrastructure Ownership](./entities/Infrastructure_Ownership.md)
+  * [Infrastructure Operation](./entities/Infrastructure_Operation.md)
+  * [Manufacturing](./entities/Manufacturing.md)
+* [Instrument Model Type](./entities/Instrument_Model_Type.md)
 
 ## Illustrative Diagrams
 ![The module diagram](./diagrams/module.svg)
 
-![The XXX example diagram](examples/01_XXX/example01.svg)
-
 ## Usage note
 This module cannot be used without the core.
-The module includes the following examples:
-* [XXX example](./examples/README.md#xxx-example)
-* ...
+
+The module includes a [set of examples](./examples/README.md).
 
 ## Development
 
