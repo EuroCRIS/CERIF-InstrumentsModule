@@ -3,7 +3,7 @@
 Source: [Mapping PIDINST to Refactored CERIF](https://docs.google.com/spreadsheets/d/1w67LH7OcDkDRgjHOj2PCJk0LG3Uj4YZyn8SpLjAttVo/edit?gid=0#gid=0)
 Numbers below refer to the PIDINST item IDs in that spreadsheet.
 
-Current state of the module: the mapping is fully documented in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md); defined so far: `Instrument_Instance`, `Instrument_Model`, the identifier classes and the three contribution types below, and `Metadata_Set` in the [Core](../CERIF-Core/entities/Metadata_Set.md). Remaining: `Instrument_Model_Type` and the open question `Group_of_Instruments`, the new attributes, and housekeeping.
+Current state of the module: the mapping is fully documented in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md); defined so far: `Instrument_Instance`, `Instrument_Model`, the identifier classes and the three contribution types below, and `Metadata_Set` in the [Core](../CERIF-Core/entities/Metadata_Set.md). Remaining: the open question `Group_of_Instruments`, the new attributes, and housekeeping.
 
 ## 1. New entities to define
 
@@ -22,7 +22,7 @@ Current state of the module: the mapping is fully documented in [mappings/PIDINS
 
 ### Other
 - [x] **Metadata_Set** (subclass of [Document](../CERIF-Core/entities/Document.md)) — target of `HasMetadata` related identifiers (item 12) — defined in the [Core](../CERIF-Core/entities/Metadata_Set.md), which also retargets `has-metadata` to it
-- [ ] **Instrument_Model_Type** (controlled-vocabulary class) — values for `Instrument_Model.type` (item 9)
+- [x] **Instrument_Model_Type** (controlled-vocabulary class) — values for `Instrument_Model.type` (item 9)
 - [ ] Open question (end of spreadsheet): **Group_of_Instruments** — possible intermediate entity for groups of instruments
 
 ## 2. New attributes
@@ -46,6 +46,7 @@ Current state of the module: the mapping is fully documented in [mappings/PIDINS
 ## 4. Document the mappings
 
 - [x] Complete PIDINST → CERIF mapping documented in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md)
+- [ ] Synchronize the adjustments made in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md) back to the [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1w67LH7OcDkDRgjHOj2PCJk0LG3Uj4YZyn8SpLjAttVo/edit?gid=0#gid=0)
 
 ## 5. Fill in the boilerplate entity documentation
 

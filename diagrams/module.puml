@@ -89,4 +89,11 @@
         "Resource_Identifier" <|-- "Instrument_Model_Identifier"
     !endsub
 
+    !startsub Instrument_Model_Type
+        class "Instrument_Model_Type" #d8f0d8 {
+        }
+
+        "Instrument_Model" "0..*" -- "0..*" "Instrument_Model_Type" : has type >
+    !endsub
+
 @enduml
