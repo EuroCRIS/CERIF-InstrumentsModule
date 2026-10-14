@@ -1,0 +1,177 @@
+@prefix : <https://w3id.org/cerif2/instruments/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/cerif2/instruments/> .
+
+<https://w3id.org/cerif2/instruments/> rdf:type owl:Ontology .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  https://w3id.org/cerif2/Multilingual_String
+<https://w3id.org/cerif2/Multilingual_String> rdf:type rdfs:Datatype .
+
+
+###  https://w3id.org/cerif2/String
+<https://w3id.org/cerif2/String> rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/cerif2/instruments/Instrument_Instance#isInstanceOf
+<https://w3id.org/cerif2/instruments/Instrument_Instance#isInstanceOf> rdf:type owl:ObjectProperty ;
+                                                                       owl:inverseOf <https://w3id.org/cerif2/instruments/Instrument_Model#hasInstance> ;
+                                                                       rdfs:domain :Instrument_Instance ;
+                                                                       rdfs:range :Instrument_Model ;
+                                                                       rdfs:comment "An Instrument Instance is an instance of a particular [Instrument Models](../entities/Instrument_Model.md). Even custom-developed instruments should have their Instrument Model."@en .
+
+
+###  https://w3id.org/cerif2/instruments/Instrument_Model#hasInstance
+<https://w3id.org/cerif2/instruments/Instrument_Model#hasInstance> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain :Instrument_Model ;
+                                                                   rdfs:range :Instrument_Instance ;
+                                                                   rdfs:comment "An Instrument Model can have any number of [Instrument Instances](../entities/Instrument_Instance.md)."@en .
+
+
+###  https://w3id.org/cerif2/instruments/Instrument_Model#hasType
+<https://w3id.org/cerif2/instruments/Instrument_Model#hasType> rdf:type owl:ObjectProperty ;
+                                                               owl:inverseOf <https://w3id.org/cerif2/instruments/Instrument_Model_Type#isTypeOf> ;
+                                                               rdfs:domain :Instrument_Model ;
+                                                               rdfs:range :Instrument_Model_Type ;
+                                                               rdfs:comment "An Instrument Model can have a number of [Instrument Model Types](../entities/Instrument_Model_Type.md)."@en .
+
+
+###  https://w3id.org/cerif2/instruments/Instrument_Model_Type#isTypeOf
+<https://w3id.org/cerif2/instruments/Instrument_Model_Type#isTypeOf> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain :Instrument_Model_Type ;
+                                                                     rdfs:range :Instrument_Model ;
+                                                                     rdfs:comment "An Instrument Model Type is the type of a number of [Instrument Models](../entities/Instrument_Model.md)."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/cerif2/instruments/Instrument_Model_Identifier#modelDesignation
+<https://w3id.org/cerif2/instruments/Instrument_Model_Identifier#modelDesignation> rdf:type owl:DatatypeProperty ;
+                                                                                   rdfs:domain :Instrument_Model_Identifier ;
+                                                                                   rdfs:range <https://w3id.org/cerif2/String> .
+
+
+###  https://w3id.org/cerif2/instruments/Instrument_Model_Type#label
+<https://w3id.org/cerif2/instruments/Instrument_Model_Type#label> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:domain :Instrument_Model_Type ;
+                                                                  rdfs:range <https://w3id.org/cerif2/Multilingual_String> .
+
+
+###  https://w3id.org/cerif2/instruments/Inventory_Number#inventoryNumber
+<https://w3id.org/cerif2/instruments/Inventory_Number#inventoryNumber> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:domain :Inventory_Number ;
+                                                                       rdfs:range <https://w3id.org/cerif2/String> .
+
+
+###  https://w3id.org/cerif2/instruments/Serial_Number#serialNumber
+<https://w3id.org/cerif2/instruments/Serial_Number#serialNumber> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:domain :Serial_Number ;
+                                                                 rdfs:range <https://w3id.org/cerif2/String> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/cerif2/Contribution_to_Infrastructure
+<https://w3id.org/cerif2/Contribution_to_Infrastructure> rdf:type owl:Class .
+
+
+###  https://w3id.org/cerif2/Infrastructure
+<https://w3id.org/cerif2/Infrastructure> rdf:type owl:Class .
+
+
+###  https://w3id.org/cerif2/Resource_Identifier
+<https://w3id.org/cerif2/Resource_Identifier> rdf:type owl:Class .
+
+
+###  https://w3id.org/cerif2/instruments/Infrastructure_Operation
+:Infrastructure_Operation rdf:type owl:Class ;
+                          rdfs:subClassOf <https://w3id.org/cerif2/Contribution_to_Infrastructure> ;
+                          rdfs:comment "Operating an [Instrument Instance](../entities/Instrument_Instance.md) or providing access to it on behalf of its [owner](../entities/Infrastructure_Ownership.md)."@en ;
+                          rdfs:label "Infrastructure Operation"@en .
+
+
+###  https://w3id.org/cerif2/instruments/Infrastructure_Ownership
+:Infrastructure_Ownership rdf:type owl:Class ;
+                          rdfs:subClassOf <https://w3id.org/cerif2/Contribution_to_Infrastructure> ;
+                          rdfs:comment "Ownership of an [Instrument Instance](../entities/Instrument_Instance.md)."@en ;
+                          rdfs:label "Infrastructure Ownership"@en .
+
+
+###  https://w3id.org/cerif2/instruments/Instrument_Instance
+:Instrument_Instance rdf:type owl:Class ;
+                     rdfs:subClassOf <https://w3id.org/cerif2/Infrastructure> ;
+                     rdfs:comment "A particular device or tool used for scientific purposes, including the study of both natural phenomena and theoretical research.<sup>[1](#fn1)</sup>"@en ;
+                     rdfs:label "Instrument Instance"@en .
+
+
+###  https://w3id.org/cerif2/instruments/Instrument_Instance_Identifier
+:Instrument_Instance_Identifier rdf:type owl:Class ;
+                                rdfs:subClassOf <https://w3id.org/cerif2/Resource_Identifier> ;
+                                rdfs:comment "An identifier other than a PID that identifies an [Instrument Instance](../entities/Instrument_Instance.md)."@en ;
+                                rdfs:label "Instrument Instance Identifier"@en .
+
+
+###  https://w3id.org/cerif2/instruments/Instrument_Model
+:Instrument_Model rdf:type owl:Class ;
+                  rdfs:subClassOf <https://w3id.org/cerif2/Infrastructure> ;
+                  rdfs:comment "A model of a device or tool used for scientific purposes, including the study of both natural phenomena and theoretical research.<sup>[1](#fn1)</sup>"@en ;
+                  rdfs:label "Instrument Model"@en .
+
+
+###  https://w3id.org/cerif2/instruments/Instrument_Model_Identifier
+:Instrument_Model_Identifier rdf:type owl:Class ;
+                             rdfs:subClassOf <https://w3id.org/cerif2/Resource_Identifier> ;
+                             rdfs:comment "An identifier used to identify an [Instrument Model](../entities/Instrument_Model.md)."@en ;
+                             rdfs:label "Instrument Model Identifier"@en .
+
+
+###  https://w3id.org/cerif2/instruments/Instrument_Model_Type
+:Instrument_Model_Type rdf:type owl:Class ;
+                       rdfs:comment "The type of instrument model."@en ;
+                       rdfs:label "Instrument Model Type"@en .
+
+
+###  https://w3id.org/cerif2/instruments/Inventory_Number
+:Inventory_Number rdf:type owl:Class ;
+                  rdfs:subClassOf :Instrument_Instance_Identifier ;
+                  rdfs:comment "An inventory number assigned to an [Instrument Instance](../entities/Instrument_Instance.md) by its owner or operator."@en ;
+                  rdfs:label "Inventory Number"@en .
+
+
+###  https://w3id.org/cerif2/instruments/Manufacturing
+:Manufacturing rdf:type owl:Class ;
+               rdfs:subClassOf <https://w3id.org/cerif2/Contribution_to_Infrastructure> ;
+               rdfs:comment "The fact of producing a specific [Instrument Model](../entities/Instrument_Model.md) or even a particular [Instrument Instance](../entities/Instrument_Instance.md)."@en ;
+               rdfs:label "Manufacturing"@en .
+
+
+###  https://w3id.org/cerif2/instruments/Other_Instrument_Instance_Identifier
+:Other_Instrument_Instance_Identifier rdf:type owl:Class ;
+                                      rdfs:subClassOf :Instrument_Instance_Identifier ;
+                                      rdfs:comment "Any other identifier pertaining to an [Instrument Instance](../entities/Instrument_Instance.md), for instance an entry in some instrument database."@en ;
+                                      rdfs:label "Other Instrument Instance Identifier"@en .
+
+
+###  https://w3id.org/cerif2/instruments/Serial_Number
+:Serial_Number rdf:type owl:Class ;
+               rdfs:subClassOf :Instrument_Instance_Identifier ;
+               rdfs:comment "A serial number assigned to an [Instrument Instance](../entities/Instrument_Instance.md), typically by the manufacturer."@en ;
+               rdfs:label "Serial Number"@en .
+
+
+###  Generated by the OWL API (version 5.5.1) https://github.com/owlcs/owlapi/
