@@ -29,7 +29,7 @@ Current state of the module: the mapping is fully documented in [mappings/PIDINS
 
 - [ ] `Instrument_Model.type : Instrument_Model_Type` (item 9)
 - [ ] `Instrument_Model.measuredVariable` — free text, 0–n (item 10)
-- [ ] **`description` gap**: item 8 maps to `Infrastructure.description`, but neither [Resource](../CERIF-Core/entities/Resource.md) nor [Infrastructure](../CERIF-Core/entities/Infrastructure.md) in Core has a `description` attribute. Decide: propose adding it to CERIF-Core, or add a module-level `description` attribute on Instrument_Model (and possibly Instrument_Instance)
+- [x] **`description` gap**: item 8 maps to `Infrastructure.description`, but neither [Resource](../CERIF-Core/entities/Resource.md) nor [Infrastructure](../CERIF-Core/entities/Infrastructure.md) in Core has a `description` attribute. Decide: propose adding it to CERIF-Core, or add a module-level `description` attribute on Instrument_Model (and possibly Instrument_Instance) — resolved: `description` attribute added to [Resource](../CERIF-Core/entities/Resource.md) in CERIF-Core (inherited by Infrastructure and thus by Instrument_Model / Instrument_Instance)
 
 ## 3. Decisions / naming to resolve (document in entity files)
 
