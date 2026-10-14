@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/cerif2/instruments/"
+     xml:base="https://w3id.org/cerif2/instruments/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/cerif2/instruments/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/cerif2/Multilingual_String -->
+
+
+    <rdfs:Datatype rdf:about="https://w3id.org/cerif2/Multilingual_String"/>
+    
+
+
+    <!-- https://w3id.org/cerif2/String -->
+
+
+    <rdfs:Datatype rdf:about="https://w3id.org/cerif2/String"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Instrument_Instance#isInstanceOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cerif2/instruments/Instrument_Instance#isInstanceOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/cerif2/instruments/Instrument_Model#hasInstance"/>
+        <rdfs:domain rdf:resource="https://w3id.org/cerif2/instruments/Instrument_Instance"/>
+        <rdfs:range rdf:resource="https://w3id.org/cerif2/instruments/Instrument_Model"/>
+        <rdfs:comment xml:lang="en">An Instrument Instance is an instance of a particular [Instrument Models](../entities/Instrument_Model.md). Even custom-developed instruments should have their Instrument Model.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Instrument_Model#hasInstance -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cerif2/instruments/Instrument_Model#hasInstance">
+        <rdfs:domain rdf:resource="https://w3id.org/cerif2/instruments/Instrument_Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/cerif2/instruments/Instrument_Instance"/>
+        <rdfs:comment xml:lang="en">An Instrument Model can have any number of [Instrument Instances](../entities/Instrument_Instance.md).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Instrument_Model#hasType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cerif2/instruments/Instrument_Model#hasType">
+        <owl:inverseOf rdf:resource="https://w3id.org/cerif2/instruments/Instrument_Model_Type#isTypeOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/cerif2/instruments/Instrument_Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/cerif2/instruments/Instrument_Model_Type"/>
+        <rdfs:comment xml:lang="en">An Instrument Model can have a number of [Instrument Model Types](../entities/Instrument_Model_Type.md).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Instrument_Model_Type#isTypeOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cerif2/instruments/Instrument_Model_Type#isTypeOf">
+        <rdfs:domain rdf:resource="https://w3id.org/cerif2/instruments/Instrument_Model_Type"/>
+        <rdfs:range rdf:resource="https://w3id.org/cerif2/instruments/Instrument_Model"/>
+        <rdfs:comment xml:lang="en">An Instrument Model Type is the type of a number of [Instrument Models](../entities/Instrument_Model.md).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Instrument_Model_Identifier#modelDesignation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cerif2/instruments/Instrument_Model_Identifier#modelDesignation">
+        <rdfs:domain rdf:resource="https://w3id.org/cerif2/instruments/Instrument_Model_Identifier"/>
+        <rdfs:range rdf:resource="https://w3id.org/cerif2/String"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Instrument_Model_Type#label -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cerif2/instruments/Instrument_Model_Type#label">
+        <rdfs:domain rdf:resource="https://w3id.org/cerif2/instruments/Instrument_Model_Type"/>
+        <rdfs:range rdf:resource="https://w3id.org/cerif2/Multilingual_String"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Inventory_Number#inventoryNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cerif2/instruments/Inventory_Number#inventoryNumber">
+        <rdfs:domain rdf:resource="https://w3id.org/cerif2/instruments/Inventory_Number"/>
+        <rdfs:range rdf:resource="https://w3id.org/cerif2/String"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Serial_Number#serialNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cerif2/instruments/Serial_Number#serialNumber">
+        <rdfs:domain rdf:resource="https://w3id.org/cerif2/instruments/Serial_Number"/>
+        <rdfs:range rdf:resource="https://w3id.org/cerif2/String"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/cerif2/Contribution_to_Infrastructure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cerif2/Contribution_to_Infrastructure"/>
+    
+
+
+    <!-- https://w3id.org/cerif2/Infrastructure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cerif2/Infrastructure"/>
+    
+
+
+    <!-- https://w3id.org/cerif2/Resource_Identifier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cerif2/Resource_Identifier"/>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Infrastructure_Operation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cerif2/instruments/Infrastructure_Operation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cerif2/Contribution_to_Infrastructure"/>
+        <rdfs:comment xml:lang="en">Operating an [Instrument Instance](../entities/Instrument_Instance.md) or providing access to it on behalf of its [owner](../entities/Infrastructure_Ownership.md).</rdfs:comment>
+        <rdfs:label xml:lang="en">Infrastructure Operation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Infrastructure_Ownership -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cerif2/instruments/Infrastructure_Ownership">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cerif2/Contribution_to_Infrastructure"/>
+        <rdfs:comment xml:lang="en">Ownership of an [Instrument Instance](../entities/Instrument_Instance.md).</rdfs:comment>
+        <rdfs:label xml:lang="en">Infrastructure Ownership</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Instrument_Instance -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cerif2/instruments/Instrument_Instance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cerif2/Infrastructure"/>
+        <rdfs:comment xml:lang="en">A particular device or tool used for scientific purposes, including the study of both natural phenomena and theoretical research.&lt;sup&gt;[1](#fn1)&lt;/sup&gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">Instrument Instance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Instrument_Instance_Identifier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cerif2/instruments/Instrument_Instance_Identifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cerif2/Resource_Identifier"/>
+        <rdfs:comment xml:lang="en">An identifier other than a PID that identifies an [Instrument Instance](../entities/Instrument_Instance.md).</rdfs:comment>
+        <rdfs:label xml:lang="en">Instrument Instance Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Instrument_Model -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cerif2/instruments/Instrument_Model">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cerif2/Infrastructure"/>
+        <rdfs:comment xml:lang="en">A model of a device or tool used for scientific purposes, including the study of both natural phenomena and theoretical research.&lt;sup&gt;[1](#fn1)&lt;/sup&gt;</rdfs:comment>
+        <rdfs:label xml:lang="en">Instrument Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Instrument_Model_Identifier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cerif2/instruments/Instrument_Model_Identifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cerif2/Resource_Identifier"/>
+        <rdfs:comment xml:lang="en">An identifier used to identify an [Instrument Model](../entities/Instrument_Model.md).</rdfs:comment>
+        <rdfs:label xml:lang="en">Instrument Model Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Instrument_Model_Type -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cerif2/instruments/Instrument_Model_Type">
+        <rdfs:comment xml:lang="en">The type of instrument model.</rdfs:comment>
+        <rdfs:label xml:lang="en">Instrument Model Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Inventory_Number -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cerif2/instruments/Inventory_Number">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cerif2/instruments/Instrument_Instance_Identifier"/>
+        <rdfs:comment xml:lang="en">An inventory number assigned to an [Instrument Instance](../entities/Instrument_Instance.md) by its owner or operator.</rdfs:comment>
+        <rdfs:label xml:lang="en">Inventory Number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Manufacturing -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cerif2/instruments/Manufacturing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cerif2/Contribution_to_Infrastructure"/>
+        <rdfs:comment xml:lang="en">The fact of producing a specific [Instrument Model](../entities/Instrument_Model.md) or even a particular [Instrument Instance](../entities/Instrument_Instance.md).</rdfs:comment>
+        <rdfs:label xml:lang="en">Manufacturing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Other_Instrument_Instance_Identifier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cerif2/instruments/Other_Instrument_Instance_Identifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cerif2/instruments/Instrument_Instance_Identifier"/>
+        <rdfs:comment xml:lang="en">Any other identifier pertaining to an [Instrument Instance](../entities/Instrument_Instance.md), for instance an entry in some instrument database.</rdfs:comment>
+        <rdfs:label xml:lang="en">Other Instrument Instance Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Serial_Number -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cerif2/instruments/Serial_Number">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cerif2/instruments/Instrument_Instance_Identifier"/>
+        <rdfs:comment xml:lang="en">A serial number assigned to an [Instrument Instance](../entities/Instrument_Instance.md), typically by the manufacturer.</rdfs:comment>
+        <rdfs:label xml:lang="en">Serial Number</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.1) https://github.com/owlcs/owlapi/ -->
+
+
