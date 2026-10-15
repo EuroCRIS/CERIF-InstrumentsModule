@@ -1,7 +1,7 @@
 # TODO — implement the "Refactored CERIF" column of the PIDINST mapping
 
-Source: [Mapping PIDINST to Refactored CERIF](https://docs.google.com/spreadsheets/d/1w67LH7OcDkDRgjHOj2PCJk0LG3Uj4YZyn8SpLjAttVo/edit?gid=0#gid=0)
-Numbers below refer to the PIDINST item IDs in that spreadsheet.
+Source: [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md)
+Numbers below refer to the PIDINST item IDs in that document.
 
 Current state of the module: the mapping is fully documented in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md); defined so far: `Instrument_Instance`, `Instrument_Model`, the identifier classes and the three contribution types below, and `Metadata_Set` in the [Core](../CERIF-Core/entities/Metadata_Set.md). Remaining: the open question `Group_of_Instruments`, the new attributes, and housekeeping.
 
@@ -23,7 +23,7 @@ Current state of the module: the mapping is fully documented in [mappings/PIDINS
 ### Other
 - [x] **Metadata_Set** (subclass of [Document](../CERIF-Core/entities/Document.md)) — target of `HasMetadata` related identifiers (item 12) — defined in the [Core](../CERIF-Core/entities/Metadata_Set.md), which also retargets `has-metadata` to it
 - [x] **Instrument_Model_Type** (controlled-vocabulary class) — values for `Instrument_Model.type` (item 9)
-- [ ] Open question (end of spreadsheet): **Group_of_Instruments** — possible intermediate entity for groups of instruments
+- [ ] Open question: **Group_of_Instruments** — possible intermediate entity for groups of instruments
 
 ## 2. New attributes
 
@@ -33,8 +33,8 @@ Current state of the module: the mapping is fully documented in [mappings/PIDINS
 
 ## 3. Decisions / naming to resolve (document in entity files)
 
-- [x] Instance→model relationship: the spreadsheet maps items 6–10 to `Infrastructure_Instance.model`; the module currently names it `is-instance-of` / `has-instance`. Decide and document (rename, or note the discrepancy) — discrepancy noted in the mapping
-- [x] `HasMetadata` (item 12): the spreadsheet says use `Resource.is-described-by` pointing at a Metadata_Set, while Core also has `has-metadata` / `is-metadata-of`. Follow the spreadsheet and document the choice — choice documented in the mapping
+- [x] Instance→model relationship: the original mapping had items 6–10 mapped to `Infrastructure_Instance.model`; the module names it `is-instance-of` / `has-instance`. Decide and document (rename, or note the discrepancy) — discrepancy noted in the mapping
+- [x] `HasMetadata` (item 12): the original mapping pointed at a Metadata_Set via `Resource.is-described-by`, while Core also has `has-metadata` / `is-metadata-of`. Use has-description and document the choice — choice documented in the mapping
 - [x] Document explicitly unsupported / unmapped items:
   - item 2 SchemaVersion (fixed "1.0", no mapping)
   - item 7.2.1 modelIdentifierType (not mapped at this stage)
@@ -46,7 +46,7 @@ Current state of the module: the mapping is fully documented in [mappings/PIDINS
 ## 4. Document the mappings
 
 - [x] Complete PIDINST → CERIF mapping documented in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md)
-- [ ] Synchronize the adjustments made in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md) back to the [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1w67LH7OcDkDRgjHOj2PCJk0LG3Uj4YZyn8SpLjAttVo/edit?gid=0#gid=0)
+- [x] Retire the Google Spreadsheet as a parallel source of record (2026-10-15) — the mapping is maintained in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md) only
 
 ## 5. Fill in the boilerplate entity documentation
 
@@ -62,7 +62,7 @@ Current state of the module: the mapping is fully documented in [mappings/PIDINS
 - [x] Generate `serializations/RDF/` (the Scholarly Publication Module ships generated OWL/RDF; this module has none)
 - [ ] Add a `.gitignore` (`.idea/` is currently untracked)
 
-## 7. Open questions from the spreadsheet (no decision yet)
+## 7. Open questions (no decision yet)
 
 - [ ] Possibly an intermediate entity `Group_of_Instruments`?
 - [ ] Number of instruments (in a group?)

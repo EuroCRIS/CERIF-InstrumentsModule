@@ -1,7 +1,7 @@
 # CERIF Instruments Module
 This module contains classes and properties for modeling scientific instruments
 in line with the *PIDINST v.1.0* specification (DOI [10.15497/RDA00070](https://doi.org/10.15497/RDA00070)).
-The mapping is described in the *[Mapping PIDINST to Refactored CERIF](https://docs.google.com/spreadsheets/d/1w67LH7OcDkDRgjHOj2PCJk0LG3Uj4YZyn8SpLjAttVo/edit?gid=0#gid=0)* shared spreadsheet.
+The mapping is described in the document [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md).
 The development of this module was done in the framework of the [INST-DSpace project](https://eurocris.org/projects/inst-dspace-project/) 
 led by [euroCRIS](https://eurocris.org/) with funding from the [Vietsch Foundation](https://www.vietsch-foundation.org/).
 
