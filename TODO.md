@@ -60,7 +60,7 @@ Current state of the module: the mapping is fully documented in [mappings/PIDINS
 - [x] Replace placeholder example `examples/01_XXX/` with a real example: a PIDINST record (instance + model info) serialized in CERIF (`.ttl` + `.puml` + `.svg`); update `examples/README.md`
 - [x] Update `README.md` listings (still references XXX/YYY data types)
 - [x] Generate `serializations/RDF/` (the Scholarly Publication Module ships generated OWL/RDF; this module has none)
-- [ ] Add a `.gitignore` (`.idea/` is currently untracked)
+- [x] Add a `.gitignore` (`.idea/`) — done in 8f0891a
 
 ## 7. Open questions (no decision yet)
 
