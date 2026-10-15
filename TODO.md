@@ -3,7 +3,7 @@
 Source: [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md)
 Numbers below refer to the PIDINST item IDs in that document.
 
-Current state of the module: the mapping is fully documented in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md); defined so far: `Instrument_Instance`, `Instrument_Model`, the identifier classes and the three contribution types below, and `Metadata_Set` in the [Core](../CERIF-Core/entities/Metadata_Set.md). Remaining: the open question `Group_of_Instruments`, the new attributes, and housekeeping.
+Current state of the module: the mapping is fully documented in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md); defined: `Instrument_Instance`, `Instrument_Model`, the identifier classes and the three contribution types below, and `Metadata_Set` in the [Core](../CERIF-Core/entities/Metadata_Set.md). All items in this list are done; possible extensions are tracked in [IDEAS.md](IDEAS.md).
 
 ## 1. New entities to define
 
@@ -23,7 +23,6 @@ Current state of the module: the mapping is fully documented in [mappings/PIDINS
 ### Other
 - [x] **Metadata_Set** (subclass of [Document](../CERIF-Core/entities/Document.md)) — target of `HasMetadata` related identifiers (item 12) — defined in the [Core](../CERIF-Core/entities/Metadata_Set.md), which also retargets `has-metadata` to it
 - [x] **Instrument_Model_Type** (controlled-vocabulary class) — values for `Instrument_Model.type` (item 9)
-- [ ] Open question: **Group_of_Instruments** — possible intermediate entity for groups of instruments
 
 ## 2. New attributes
 
