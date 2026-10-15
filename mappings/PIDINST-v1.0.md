@@ -1,10 +1,8 @@
 # Mapping of PIDINST v1.0 to Refactored CERIF
 
-The complete mapping between the *PIDINST v.1.0* specification (DOI [10.15497/RDA00070](https://doi.org/10.15497/RDA00070)) and the CERIF data model: the [CERIF Core](https://github.com/EuroCRIS/CERIF-Core) plus this [Instruments Module](../README.md).
+The mapping between the *PIDINST v.1.0* specification (DOI [10.15497/RDA00070](https://doi.org/10.15497/RDA00070)) and the CERIF data model: the [CERIF Core](https://github.com/EuroCRIS/CERIF-Core) plus this [Instruments Module](../README.md).
 
 This document is the source of record for the mapping (it was previously maintained as the [shared spreadsheet "Mapping PIDINST to Refactored CERIF"](https://docs.google.com/spreadsheets/d/1w67LH7OcDkDRgjHOj2PCJk0LG3Uj4YZyn8SpLjAttVo/edit?gid=0#gid=0), which is no longer updated) — [Jan Dvořák](https://orcid.org/0000-0001-8985-152X), [Dragan Ivanović](https://orcid.org/0000-0002-9942-5521), assisted by Qwen3.8-27B run by the Computing and Information Centre of the Czech Technical University in Prague, CZ (https://ror.org/03kqpb082). The development of this mapping was done in the framework of the [INST-DSpace project](https://eurocris.org/projects/inst-dspace-project/) led by euroCRIS with funding from the Vietsch Foundation.
-
-Entity names in **bold** without a link are to be defined by this module (see [TODO.md](../TODO.md)).
 
 ## General notes
 
@@ -65,16 +63,3 @@ The model information (items 6–10) is mapped to Instrument Model, a subclass o
 | 9.2 | instrumentTypeIdentifier | | 0–1 | Identifier used to identify the type of the instrument. Free text, should be a globally unique identifier. | — (no individual mapping; the identifier is a property of the Instrument_Model_Type value) |
 | 9.2.1 | instrumentTypeIdentifierType | | 1 | Type of the identifier. Free text, see note. | — |
 | 10 | MeasuredVariable | R | 0–n | The variable(s) that this instrument measures or observes. Free text. | Instrument_Model.measuredVariable (free text, 0–n) |
-
-## Unmapped and open items
-
-- item 2 SchemaVersion — not mapped (fixed value "1.0")
-- item 7.2.1 modelIdentifierType — not mapped at this stage
-- item 12 relationType=References — not supported (too generic)
-- item 12 relationType=IsAttachedTo — not supported at this stage
-- providing access to the instrument via a Service (general note 2) — not covered by this module
-- open questions (no decision yet):
-  - possibly an intermediate entity **Group_of_Instruments**?
-  - number of instruments (in a group?)
-  - location (of the instrument instance?)
-  - responsible person / organisation unit?

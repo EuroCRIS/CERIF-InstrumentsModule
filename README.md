@@ -6,7 +6,9 @@ The development of this module was done in the framework of the [INST-DSpace pro
 led by [euroCRIS](https://eurocris.org/) with funding from the [Vietsch Foundation](https://www.vietsch-foundation.org/).
 
 ## Status
-(2026-09-28) Work in progress.
+2026-10-15 — for review
+
+Some ideas of possible extensions in the future are listed in a [separate file](./IDEAS.md).
 
 ## Overview
 Instruments – or more specifically [Instrument Instances](./entities/Instrument_Instance.md) – are [Infrastructure](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Infrastructure.md).
