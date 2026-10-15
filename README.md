@@ -11,9 +11,11 @@ led by [euroCRIS](https://eurocris.org/) with funding from the [Vietsch Foundati
 ## Overview
 Instruments – or more specifically [Instrument Instances](./entities/Instrument_Instance.md) – are [Infrastructure](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Infrastructure.md).
 Instrument instances link information about their [models](./entities/Instrument_Model.md): several instrument instances can share a single model information record.
+Instrument models can be classified by one or more [Instrument Model Types](./entities/Instrument_Model_Type.md).
 Instrument instances are identified by [Instrument Instance Identifiers](./entities/Instrument_Instance_Identifier.md) — such as [Serial Numbers](./entities/Serial_Number.md), [Inventory Numbers](./entities/Inventory_Number.md) and other [identifiers](./entities/Other_Instrument_Instance_Identifier.md) — while models are identified by [Instrument Model Identifiers](./entities/Instrument_Model_Identifier.md).
-The kind of a model can be recorded as an [Instrument Model Type](./entities/Instrument_Model_Type.md).
-The relationships of an instrument with the agents involved are recorded as [Infrastructure Ownership](./entities/Infrastructure_Ownership.md), [Infrastructure Operation](./entities/Infrastructure_Operation.md) and [Manufacturing](./entities/Manufacturing.md).
+
+An instrument instance can be linked with agents in the role of [owner](./entities/Infrastructure_Ownership.md) or [operation](./entities/Infrastructure_Operation.md); 
+an instrument model is linked to its [maker](./entities/Manufacturing.md).
 
 ## Listings
 
