@@ -2,7 +2,7 @@
 
 The complete mapping between the *PIDINST v.1.0* specification (DOI [10.15497/RDA00070](https://doi.org/10.15497/RDA00070)) and the CERIF data model: the [CERIF Core](https://github.com/EuroCRIS/CERIF-Core) plus this [Instruments Module](../README.md).
 
-Source of record: [Mapping PIDINST to Refactored CERIF](https://docs.google.com/spreadsheets/d/1w67LH7OcDkDRgjHOj2PCJk0LG3Uj4YZyn8SpLjAttVo/edit?gid=0#gid=0) — Jan Dvořák, Dragan Ivanović. The development of this mapping was done in the framework of the [INST-DSpace project](https://eurocris.org/projects/inst-dspace-project/) led by euroCRIS with funding from the Vietsch Foundation.
+Source of record: [Mapping PIDINST to Refactored CERIF](https://docs.google.com/spreadsheets/d/1w67LH7OcDkDRgjHOj2PCJk0LG3Uj4YZyn8SpLjAttVo/edit?gid=0#gid=0) — [Jan Dvořák](https://orcid.org/0000-0001-8985-152X), [Dragan Ivanović](https://orcid.org/0000-0002-9942-5521), assisted by Qwen3.8-27B run by the Computing and Information Centre of the Czech Technical University in Prague, CZ (https://ror.org/03kqpb082). The development of this mapping was done in the framework of the [INST-DSpace project](https://eurocris.org/projects/inst-dspace-project/) led by euroCRIS with funding from the Vietsch Foundation.
 
 Entity names in **bold** without a link are to be defined by this module (see [TODO.md](../TODO.md)).
 
