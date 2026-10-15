@@ -26,6 +26,8 @@
 :ocean_surveyor_model a <https://w3id.org/cerif2/instruments/Instrument_Model> ;
   <https://w3id.org/cerif2/Infrastructure#title> "TRDI Ocean Surveyor"@en ;
   <https://w3id.org/cerif2/instruments/Instrument_Model#hasType> :adcp_measurement_device ;
+  <https://w3id.org/cerif2/instruments/Instrument_Model#measuredVariable> "water current velocity"@en ,
+    "current velocity profile"@en ;
   <https://w3id.org/cerif2/Infrastructure#hasContribution> :manufacturing_ocean_surveyor_model .
 
 :adcp_measurement_device a <https://w3id.org/cerif2/instruments/Instrument_Model_Type> ;

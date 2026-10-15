@@ -58,6 +58,12 @@
 #    Data properties
 #################################################################
 
+###  https://w3id.org/cerif2/instruments/Instrument_Model#measuredVariable
+<https://w3id.org/cerif2/instruments/Instrument_Model#measuredVariable> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:domain :Instrument_Model ;
+                                                                        rdfs:range <https://w3id.org/cerif2/Multilingual_String> .
+
+
 ###  https://w3id.org/cerif2/instruments/Instrument_Model_Identifier#modelDesignation
 <https://w3id.org/cerif2/instruments/Instrument_Model_Identifier#modelDesignation> rdf:type owl:DatatypeProperty ;
                                                                                    rdfs:domain :Instrument_Model_Identifier ;

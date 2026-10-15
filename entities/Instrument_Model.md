@@ -11,7 +11,9 @@ Even a unique [Instrument Instance](../entities/Instrument_Instance.md) should h
 [Infrastructure](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Infrastructure.md)
 
 ## Attributes
-None besides those of [Infrastructure](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Infrastructure.md).
+Besides those of [Infrastructure](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Infrastructure.md):
+
+measured variable : List<[Multilingual String](https://github.com/EuroCRIS/CERIF-Core/blob/main/datatypes/Multilingual_String.md)> — the variable(s) that the instrument measures or observes
 
 ## Relationships
 Besides those of [Infrastructure](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Infrastructure.md):

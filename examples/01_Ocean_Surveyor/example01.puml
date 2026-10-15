@@ -9,6 +9,8 @@
 
     object "<u>TRDI Ocean Surveyor : Instrument_Model</u>" as model #E4E6D2 {
         title = "TRDI Ocean Surveyor"@en
+        measuredVariable = "water current velocity"@en
+        measuredVariable = "current velocity profile"@en
     }
 
     object "<u>Acoustic Doppler Current Profiling Measurement Device : Instrument_Model_Type</u>" as modelType #E4E6D2 {

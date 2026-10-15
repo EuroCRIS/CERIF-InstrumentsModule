@@ -106,6 +106,16 @@
     
 
 
+    <!-- https://w3id.org/cerif2/instruments/Instrument_Model#measuredVariable -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cerif2/instruments/Instrument_Model#measuredVariable">
+        <rdfs:domain rdf:resource="https://w3id.org/cerif2/instruments/Instrument_Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/cerif2/Multilingual_String"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/cerif2/instruments/Instrument_Model_Identifier#modelDesignation -->
 
 

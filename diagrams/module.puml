@@ -21,6 +21,7 @@
 
     !startsub Instrument_Model
         class "Instrument_Model" #E4E6D2 {
+            measuredVariable : List<Multilingual_String>
         }
 
         "Infrastructure" <|-- "Instrument_Model"
