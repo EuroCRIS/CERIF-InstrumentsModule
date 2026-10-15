@@ -1,16 +1,20 @@
 # Mapping of PIDINST v1.0 to Refactored CERIF
 
-The mapping between the *PIDINST v.1.0* specification (DOI [10.15497/RDA00070](https://doi.org/10.15497/RDA00070)) and the CERIF data model: the [CERIF Core](https://github.com/EuroCRIS/CERIF-Core) plus this [Instruments Module](../README.md).
+This document describes the mapping between the *PIDINST v.1.0* specification (DOI [10.15497/RDA00070](https://doi.org/10.15497/RDA00070)) and the CERIF data model: the [CERIF Core](https://github.com/EuroCRIS/CERIF-Core) plus this [Instruments Module](../README.md).
+This mapping was developed in the framework of the [INST-DSpace project](https://eurocris.org/projects/inst-dspace-project/) the [INST-DSpace project](https://eurocris.org/projects/inst-dspace-project/)
+led by [euroCRIS](https://eurocris.org/) with funding from the [Vietsch Foundation](https://www.vietsch-foundation.org/).
 
-This document is the source of record for the mapping (it was previously maintained as the [shared spreadsheet "Mapping PIDINST to Refactored CERIF"](https://docs.google.com/spreadsheets/d/1w67LH7OcDkDRgjHOj2PCJk0LG3Uj4YZyn8SpLjAttVo/edit?gid=0#gid=0), which is no longer updated) — [Jan Dvořák](https://orcid.org/0000-0001-8985-152X), [Dragan Ivanović](https://orcid.org/0000-0002-9942-5521), assisted by Qwen3.8-27B run by the Computing and Information Centre of the Czech Technical University in Prague, CZ (https://ror.org/03kqpb082). The development of this mapping was done in the framework of the [INST-DSpace project](https://eurocris.org/projects/inst-dspace-project/) led by euroCRIS with funding from the Vietsch Foundation.
+This document is the source of record for the mapping. 
+It was previously maintained as the [shared spreadsheet "Mapping PIDINST to Refactored CERIF"](https://docs.google.com/spreadsheets/d/1w67LH7OcDkDRgjHOj2PCJk0LG3Uj4YZyn8SpLjAttVo/edit?gid=0#gid=0), 
+but that one is no longer updated and may even be removed in the future. 
 
 ## General notes
 
-1. CERIF-InstrumentsModule implements the PIDINST specification v1.0 (DOI 10.15497/RDA00070).
+1. CERIF-InstrumentsModule implements the PIDINST specification v1.0 (DOI [10.15497/RDA00070](https://doi.org/10.15497/RDA00070)).
 2. In CERIF we distinguish between an instrument instance and an instrument model; an instance references its model. This allows for information normalization. In the ideal case, authoritative model information is made available by the instrument manufacturer.
 3. PIDINST defines the identifierType property (items 1.1, 12.1 and 13.1) for identifiers. CERIF maps that to a specific subclass of Resource_Identifier. We do not make that explicit in this table, as it would clutter the other mapping info. Similar mechanisms apply to other identifier types (for instance, ownerIdentifierType maps to subclasses of Agent_Identifier).
 
-## PIDINST record except model information → [Instrument Instance](../entities/Instrument_Instance.md)
+## 1. [Instrument Instance](../entities/Instrument_Instance.md): The PIDINST record except information about the instrument's model
 
 The PIDINST record, except the model information (items 6–10), is mapped to Instrument Instance, a subclass of Core [Infrastructure](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Infrastructure.md).
 
@@ -43,7 +47,7 @@ The PIDINST record, except the model information (items 6–10), is mapped to In
 | 13.2 | alternateIdentifierType=InventoryNumber | | 0–n | | [Inventory_Number](../entities/Inventory_Number.md) as a subtype of Resource_Identifier |
 | 13.3 | alternateIdentifierType=Other | | 0–n | | [Other_Instrument_Instance_Identifier](../entities/Other_Instrument_Instance_Identifier.md) as a subtype of Resource_Identifier |
 
-## Model information from PIDINST record → [Instrument Model](../entities/Instrument_Model.md)
+## 2. [Instrument Model](../entities/Instrument_Model.md): Model information from the PIDINST record
 
 The model information (items 6–10) is mapped to Instrument Model, a subclass of Core [Infrastructure](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Infrastructure.md), referenced from the instance via [is-instance-of](../entities/Instrument_Instance.md#user-content-rel__is-instance-of) / [has-instance](../entities/Instrument_Model.md#user-content-rel__has-instance).
 
