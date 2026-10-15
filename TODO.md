@@ -64,7 +64,4 @@ Current state of the module: the mapping is fully documented in [mappings/PIDINS
 
 ## 7. Open questions (no decision yet)
 
-- [ ] Possibly an intermediate entity `Group_of_Instruments`?
-- [ ] Number of instruments (in a group?)
-- [ ] Location (of the instrument instance?)
-- [ ] Responsible person / organisation unit?
+Moved to [IDEAS.md](IDEAS.md).
