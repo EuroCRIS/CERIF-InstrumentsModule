@@ -64,3 +64,11 @@ Current state of the module: the mapping is fully documented in [mappings/PIDINS
 ## 7. Open questions (no decision yet)
 
 Moved to [IDEAS.md](IDEAS.md).
+
+## 8. Review
+
+Review by Dragan Ivanović, 2026-10-22. Scope: coverage of [PIDINST v1.0 mapping](mappings/PIDINST-v1.0.md) by the entity definitions and RDF/OWL serialization, including the updated local CERIF-Core dependency.
+
+- [ ] **Other identifier value:** Define where `Other_Instrument_Instance_Identifier` stores the actual identifier string. Neither this class nor its parent classes currently define a value attribute.
+- [ ] **Instrument lifecycle dates:** Distinguish commissioned/decommissioned dates from the period of an operator's relationship with an instrument. A change of operator must not imply that the instrument was decommissioned and commissioned again.
+- [ ] **Alternate identifier type name:** Define where to store `alternateIdentifierName` (PIDINST item 13.2), the optional supplementary name of the identifier type, especially when `alternateIdentifierType` is Other. For instance, we can add `name` attribute into `Other_Instrument_Instance_Identifier.md`.
