@@ -30,4 +30,5 @@ https://dspacecris.eurocris.org/entities/equipment/b306bf08-a96c-4933-9ee9-1e843
 
 - The responsible person is an open question of the PIDINST mapping (see [TODO.md](../TODO.md)).
 - The date created, the access level, and the file checksum have no counterparts in the model.
+- The commissioned/decommissioned dates are not present in the source record; the example adds a [Date Range](https://github.com/EuroCRIS/CERIF-Core/blob/main/datatypes/Date_Range.md) to the [Ownership](../entities/Infrastructure_Ownership.md) contribution, to demonstrate their mapping (PIDINST item 11) to the contribution's date range.
 - The record has no PID (DOI); the PIDINST mapping uses the [DOI Identifier](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/DOI_Identifier.md) for the PID, while the internal ID is represented by the Core [Local Resource Identifier](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Local_Resource_Identifier.md).

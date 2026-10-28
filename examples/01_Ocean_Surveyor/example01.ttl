@@ -53,7 +53,10 @@
 
 :ownership_ocean_surveyor a <https://w3id.org/cerif2/instruments/Infrastructure_Ownership> ;
   <https://w3id.org/cerif2/Contribution_to_Infrastructure#hasTarget> :ocean_surveyor ;
-  <https://w3id.org/cerif2/Activity#hasActor> :eurocris .
+  <https://w3id.org/cerif2/Activity#hasActor> :eurocris ;
+  <https://w3id.org/cerif2/Activity#dateRange> [ a <https://w3id.org/cerif2/Date_Range> ;
+    <https://w3id.org/cerif2/Date_Range#startDate> "2000-01-01"^^<https://w3id.org/cerif2/Date> ;
+    <https://w3id.org/cerif2/Date_Range#endDate> "2010-12-31"^^<https://w3id.org/cerif2/Date> ] .
 
 :manufacturing_ocean_surveyor_model a <https://w3id.org/cerif2/instruments/Manufacturing> ;
   <https://w3id.org/cerif2/Contribution_to_Infrastructure#hasTarget> :ocean_surveyor_model ;

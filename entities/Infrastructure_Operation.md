@@ -8,6 +8,7 @@ While the owner (= the [Agent](https://github.com/EuroCRIS/CERIF-Core/blob/main/
 the operator (= this [Agent](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Agent.md) in this entity) is typically a subunit that has been made responsible for the instrument.
 In case the instrument is lent, it may also be another organisation's subunit.
 The [Activity](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Activity.md)'s (the ur-ancestor of the class hierarchy) [dateRange](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Activity.md) property may indicate when the recorded relationship between the [Agent](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Agent.md) and the [Instrument Instance](../entities/Instrument_Instance.md) is/was true.
+In particular, a change of the operator does not imply that the instrument was decommissioned and commissioned again: the lifecycle (commissioned/decommissioned) dates are recorded with the [Infrastructure Ownership](../entities/Infrastructure_Ownership.md) contribution instead (cf. the [PIDINST mapping](../mappings/PIDINST-v1.0.md), item 11).
 
 ## Specialization of
 [Contribution to Infrastructure](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Contribution_to_Infrastructure.md)

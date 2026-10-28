@@ -17,7 +17,10 @@
         label = "Acoustic Doppler Current Profiling Measurement Device"@en
     }
 
-    object "<u>Ownership 1 : Infrastructure_Ownership</u>" as ownership #E4E6D2
+    object "<u>Ownership 1 : Infrastructure_Ownership</u>" as ownership #E4E6D2 {
+        dateRange.startDate = "2000-01-01" ^^ Date
+        dateRange.endDate = "2010-12-31" ^^ Date
+    }
 
     object "<u>Manufacturing 1 : Manufacturing</u>" as manufacturing #E4E6D2
 
