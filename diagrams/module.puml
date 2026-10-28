@@ -77,6 +77,8 @@
 
     !startsub Other_Instrument_Instance_Identifier
         class "Other_Instrument_Instance_Identifier" #E4E6D2 {
+            value : String
+            name : String
         }
 
         "Instrument_Instance_Identifier" <|-- "Other_Instrument_Instance_Identifier"

@@ -82,6 +82,20 @@
                                                                        rdfs:range <https://w3id.org/cerif2/String> .
 
 
+###  https://w3id.org/cerif2/instruments/Other_Instrument_Instance_Identifier#name
+<https://w3id.org/cerif2/instruments/Other_Instrument_Instance_Identifier#name> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:domain :Other_Instrument_Instance_Identifier ;
+                                                                                rdfs:range <https://w3id.org/cerif2/String> ;
+                                                                                rdfs:label "a supplementary name for the identifier type, typically the instrument database or registry the identifier is an entry in" .
+
+
+###  https://w3id.org/cerif2/instruments/Other_Instrument_Instance_Identifier#value
+<https://w3id.org/cerif2/instruments/Other_Instrument_Instance_Identifier#value> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:domain :Other_Instrument_Instance_Identifier ;
+                                                                                 rdfs:range <https://w3id.org/cerif2/String> ;
+                                                                                 rdfs:label "the identifier itself" .
+
+
 ###  https://w3id.org/cerif2/instruments/Serial_Number#serialNumber
 <https://w3id.org/cerif2/instruments/Serial_Number#serialNumber> rdf:type owl:DatatypeProperty ;
                                                                  rdfs:domain :Serial_Number ;

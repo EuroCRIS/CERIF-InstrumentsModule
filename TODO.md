@@ -70,11 +70,11 @@ Moved to [IDEAS.md](IDEAS.md).
 Review by Dragan Ivanović, 2026-10-22. Scope: coverage of [PIDINST v1.0 mapping](mappings/PIDINST-v1.0.md) by the entity definitions and RDF/OWL serialization, including the updated local CERIF-Core dependency.
 
 1. **Other identifier value:** Define where `Other_Instrument_Instance_Identifier` stores the actual identifier string. Neither this class nor its parent classes currently define a value attribute.
-   - [ ] Add Other_Instrument_Instance_Identifier.value
+   - [x] Add Other_Instrument_Instance_Identifier.value — resolved: `value : String` added to the entity definition; the mapping (item 13) documents where the identifier string lands for each subtype
 2. **Instrument lifecycle dates:** Distinguish commissioned/decommissioned dates from the period of an operator's relationship with an instrument. A change of operator must not imply that the instrument was decommissioned and commissioned again.
    - [ ] Map this to Ownership instead of Operating.
    - [ ] Document this better in the mapping description: CERIF is a bit more detailed here by also recording the owner, but also PIDINST itself allows for multiple commission/decommission dates.
 3. **Alternate identifier type name:** Define where to store `alternateIdentifierName` (PIDINST item 13.2), the optional supplementary name of the identifier type, especially when `alternateIdentifierType` is Other. For instance, we can add `name` attribute into `Other_Instrument_Instance_Identifier.md`.
-   - [ ] Add Other_Instrument_Instance_Identifier.name
+   - [x] Add Other_Instrument_Instance_Identifier.name — resolved: `name : String` added to the entity definition; the mapping (item 13.2) targets it for `alternateIdentifierName`
 4. Distinction betweeen PIDINST Identifier and AlternateIdentifier is not mapped in CERIF, both of these become Instrument_Instance_Identifiers. Should it be marked somehow?
    - [ ] Add `principal` boolean flag in Resource_Identifier.

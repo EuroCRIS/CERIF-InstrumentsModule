@@ -146,6 +146,28 @@
     
 
 
+    <!-- https://w3id.org/cerif2/instruments/Other_Instrument_Instance_Identifier#name -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cerif2/instruments/Other_Instrument_Instance_Identifier#name">
+        <rdfs:domain rdf:resource="https://w3id.org/cerif2/instruments/Other_Instrument_Instance_Identifier"/>
+        <rdfs:range rdf:resource="https://w3id.org/cerif2/String"/>
+        <rdfs:label>a supplementary name for the identifier type, typically the instrument database or registry the identifier is an entry in</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cerif2/instruments/Other_Instrument_Instance_Identifier#value -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cerif2/instruments/Other_Instrument_Instance_Identifier#value">
+        <rdfs:domain rdf:resource="https://w3id.org/cerif2/instruments/Other_Instrument_Instance_Identifier"/>
+        <rdfs:range rdf:resource="https://w3id.org/cerif2/String"/>
+        <rdfs:label>the identifier itself</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/cerif2/instruments/Serial_Number#serialNumber -->
 
 
