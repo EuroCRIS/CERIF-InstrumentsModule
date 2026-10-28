@@ -77,4 +77,4 @@ Review by Dragan Ivanović, 2026-10-22. Scope: coverage of [PIDINST v1.0 mapping
 3. **Alternate identifier type name:** Define where to store `alternateIdentifierName` (PIDINST item 13.2), the optional supplementary name of the identifier type, especially when `alternateIdentifierType` is Other. For instance, we can add `name` attribute into `Other_Instrument_Instance_Identifier.md`.
    - [x] Add Other_Instrument_Instance_Identifier.name — resolved: `name : String` added to the entity definition; the mapping (item 13.2) targets it for `alternateIdentifierName`
 4. Distinction betweeen PIDINST Identifier and AlternateIdentifier is not mapped in CERIF, both of these become Instrument_Instance_Identifiers. Should it be marked somehow?
-   - [ ] Add `principal` boolean flag in Resource_Identifier.
+   - [x] Add `principal` boolean flag in Resource_Identifier. — resolved: `principal : Boolean` added to [Resource_Identifier](../CERIF-Core/entities/Resource_Identifier.md) in CERIF-Core; the mapping (items 1 and 13) documents the distinction: Identifier → True, AlternateIdentifiers → False
