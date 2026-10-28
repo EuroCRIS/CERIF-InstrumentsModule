@@ -78,3 +78,8 @@ Review by Dragan Ivanović, 2026-10-22. Scope: coverage of [PIDINST v1.0 mapping
    - [x] Add Other_Instrument_Instance_Identifier.name — resolved: `name : String` added to the entity definition; the mapping (item 13.2) targets it for `alternateIdentifierName`
 4. Distinction betweeen PIDINST Identifier and AlternateIdentifier is not mapped in CERIF, both of these become Instrument_Instance_Identifiers. Should it be marked somehow?
    - [x] Add `principal` boolean flag in Resource_Identifier. — resolved: `principal : Boolean` added to [Resource_Identifier](../CERIF-Core/entities/Resource_Identifier.md) in CERIF-Core; the mapping (items 1 and 13) documents the distinction: Identifier → True, AlternateIdentifiers → False
+
+Additional light review by Jan Dvořák, 2026-10-28.
+
+5. The Identifier ([mapping](mappings/PIDINST-v1.0.md) row 1) need not be just a DOI; it could be a Handle or some other type of identifier.
+   - [ ] Fix the description of the target in mapping row 1, allowing a general [Resource Identifier](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Resource_Identifier.md).
