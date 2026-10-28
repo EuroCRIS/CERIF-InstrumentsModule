@@ -82,4 +82,4 @@ Review by Dragan Ivanović, 2026-10-22. Scope: coverage of [PIDINST v1.0 mapping
 Additional light review by Jan Dvořák, 2026-10-28.
 
 5. The Identifier ([mapping](mappings/PIDINST-v1.0.md) row 1) need not be just a DOI; it could be a Handle or some other type of identifier.
-   - [ ] Fix the description of the target in mapping row 1, allowing a general [Resource Identifier](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Resource_Identifier.md).
+   - [x] Fix the description of the target in mapping row 1, allowing a general [Resource Identifier](https://github.com/EuroCRIS/CERIF-Core/blob/main/entities/Resource_Identifier.md). — resolved: row 1 now targets a general Resource Identifier, with the DOI Identifier kept as an example for the DOI case
