@@ -3,7 +3,7 @@
 Source: [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md)
 Numbers below refer to the PIDINST item IDs in that document.
 
-Current state of the module: the mapping is fully documented in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md); defined: `Instrument_Instance`, `Instrument_Model`, the identifier classes and the three contribution types below, and `Metadata_Set` in the [Core](../CERIF-Core/entities/Metadata_Set.md). All items in this list are done; possible extensions are tracked in [IDEAS.md](IDEAS.md).
+Current state of the module: the mapping is fully documented in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md); defined: `Instrument_Instance`, `Instrument_Model`, the identifier classes and the three contribution types below, and `Metadata_Set` in the [Core](../CERIF-Core/entities/Metadata_Set.md). This list covers the mapping; possible extensions are tracked in [IDEAS.md](IDEAS.md).
 
 ## 1. New entities to define
 

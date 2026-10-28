@@ -8,7 +8,7 @@ the mapping is documented in [mappings/PIDINST-v1.0.md](mappings/PIDINST-v1.0.md
 It was developed by [Jan Dvořák](https://orcid.org/0000-0001-8985-152X) and [Dragan Ivanović](https://orcid.org/0000-0002-9942-5521), assisted by Qwen3.8-27B run by the Computing and Information Centre of the Czech Technical University in Prague, CZ (https://ror.org/03kqpb082).
 
 ## Status
-2026-10-15 — for internal review
+2026-10-28 — for review within the INST-DSpace project team.
 
 Some ideas of possible extensions in the future are listed in [IDEAS.md](./IDEAS.md) file.
 
